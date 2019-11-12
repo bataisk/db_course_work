@@ -23,12 +23,18 @@ class Titles(models.Model):
     number_of_seasons = models.IntegerField(default=1)
     last_air_date = models.DateField(null=True)
 
-    recommendations = models.ManyToManyField('self', null=True)
+    recommendations = models.ManyToManyField('self')
+
+    class Meta:
+        db_table = 'titles'
 
 
 class Genres(models.Model):
-    name = models.CharField(max_length=20)
-    titles = models.ManyToManyField(Titles)
+    name = models.CharField(max_length=20, unique=True)
+    titles = models.ManyToManyField(Titles, db_table='title_genre')
+
+    class Meta:
+        db_table = 'genres'
 
 
 
