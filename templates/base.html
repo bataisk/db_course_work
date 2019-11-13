@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     {% block additional_head_tags %}
@@ -13,7 +14,7 @@
         <nav class="content">
             <ul>
                 <li class='logo'>
-                    <a href="base.html"><img src="static/index/logo.svg" alt="Logo" width="81" height="72"></a>
+                    <a href="base.html"><img src="{% static 'logo.svg' %}" alt="Logo" width="81" height="72"></a>
                 </li>
                 <li>
                     <a href="discovery.html">DISCOVER</a>
@@ -70,7 +71,7 @@
     <footer>
         <nav>
             <div class="">
-                <img src="static/index/logo.svg" alt="Logo" width="130" height="116">
+                <img src="{% static 'logo.svg' %}" alt="Logo" width="130" height="116">
                 <a href="">Join the Community</a>
             </div>
             <div class="">
