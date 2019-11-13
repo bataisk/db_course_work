@@ -14,3 +14,11 @@ def index(request):
     }
 
     return render(request, 'discover/index.html', context=context)
+
+
+def discover_movies(request):
+    pass
+
+
+def discover_shows(request):
+    pass
