@@ -1,4 +1,5 @@
 from django.db import models
+from django import template
 
 
 class Titles(models.Model):
@@ -26,6 +27,9 @@ class Titles(models.Model):
     last_air_date = models.DateField(null=True)
 
     recommendations = models.ManyToManyField('self')
+
+    def get_absolute_url(self):
+        return f'/title/{self.pk}'
 
     class Meta:
         db_table = 'titles'
