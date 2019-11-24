@@ -1,8 +1,7 @@
 from django.db import models
-from django import template
 
 
-class Titles(models.Model):
+class Title(models.Model):
     is_movie = models.BooleanField(default=True)
     backdrop_url = models.CharField(max_length=50, null=True)
     poster_url = models.CharField(max_length=50, null=True)
@@ -26,8 +25,6 @@ class Titles(models.Model):
     number_of_seasons = models.IntegerField(default=1)
     last_air_date = models.DateField(null=True)
 
-    recommendations = models.ManyToManyField('self')
-
     def get_absolute_url(self):
         return f'/title/{self.pk}'
 
@@ -35,12 +32,16 @@ class Titles(models.Model):
         db_table = 'titles'
 
 
-class Genres(models.Model):
+
+class Genre(models.Model):
+    is_movie_genre = models.BooleanField(default=True)
+    is_both_genre = models.BooleanField(default=False)
     name = models.CharField(max_length=20, unique=True)
-    titles = models.ManyToManyField(Titles, db_table='title_genre')
+    titles = models.ManyToManyField(Title, db_table='title_genre')
 
     class Meta:
         db_table = 'genres'
+        ordering = ('name',)
 
 
 

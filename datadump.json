@@ -1,0 +1,1777 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add titles",
+    "content_type": 7,
+    "codename": "add_titles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change titles",
+    "content_type": 7,
+    "codename": "change_titles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete titles",
+    "content_type": 7,
+    "codename": "delete_titles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view titles",
+    "content_type": 7,
+    "codename": "view_titles"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add genres",
+    "content_type": 8,
+    "codename": "add_genres"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change genres",
+    "content_type": 8,
+    "codename": "change_genres"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete genres",
+    "content_type": 8,
+    "codename": "delete_genres"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view genres",
+    "content_type": 8,
+    "codename": "view_genres"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add genre",
+    "content_type": 8,
+    "codename": "add_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change genre",
+    "content_type": 8,
+    "codename": "change_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete genre",
+    "content_type": 8,
+    "codename": "delete_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view genre",
+    "content_type": 8,
+    "codename": "view_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add title",
+    "content_type": 7,
+    "codename": "add_title"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change title",
+    "content_type": 7,
+    "codename": "change_title"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete title",
+    "content_type": 7,
+    "codename": "delete_title"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view title",
+    "content_type": 7,
+    "codename": "view_title"
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 1,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+    "poster_url": "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+    "budget": 55000000,
+    "homepage": "http://www.jokermovie.net/",
+    "imdb_id": "tt7286456",
+    "tmdb_id": 475557,
+    "name": "Joker",
+    "overview": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+    "popularity": 619.889,
+    "release_date": "2019-10-02",
+    "revenue": 936887108,
+    "runtime": 122,
+    "status": "Released",
+    "vote_average": 8.5,
+    "vote_count": 5259,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 2,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/a6cDxdwaQIFjSkXf7uskg78ZyTq.jpg",
+    "poster_url": "/vqzNJRH4YyquRiWxCCOH0aXggHI.jpg",
+    "budget": 185000000,
+    "homepage": null,
+    "imdb_id": "tt6450804",
+    "tmdb_id": 290859,
+    "name": "Terminator: Dark Fate",
+    "overview": "More than two decades have passed since Sarah Connor prevented Judgment Day, changed the future, and re-wrote the fate of the human race. Dani Ramos is living a simple life in Mexico City with her brother and father when a highly advanced and deadly new Terminator \u2013 a Rev-9 \u2013 travels back through time to hunt and kill her. Dani's survival depends on her joining forces with two warriors: Grace, an enhanced super-soldier from the future, and a battle-hardened Sarah Connor. As the Rev-9 ruthlessly destroys everything and everyone in its path on the hunt for Dani, the three are led to a T-800 from Sarah\u2019s past that may be their last best hope.",
+    "popularity": 278.366,
+    "release_date": "2019-10-23",
+    "revenue": 125650308,
+    "runtime": 128,
+    "status": "Released",
+    "vote_average": 6.5,
+    "vote_count": 485,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 3,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/skvI4rYFrKXS73BJxWGH54Omlvv.jpg",
+    "poster_url": "/tBuabjEqxzoUBHfbyNbd8ulgy5j.jpg",
+    "budget": 85000000,
+    "homepage": null,
+    "imdb_id": "tt4777008",
+    "tmdb_id": 420809,
+    "name": "Maleficent: Mistress of Evil",
+    "overview": "Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies, and dark new forces at play.",
+    "popularity": 154.405,
+    "release_date": "2019-10-16",
+    "revenue": 385990275,
+    "runtime": 118,
+    "status": "Released",
+    "vote_average": 7.2,
+    "vote_count": 809,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 4,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/61sbyO47yIpsMFyLhY1MWcqjg1Q.jpg",
+    "poster_url": "/xvYCZ740XvngXK0FNeSNVTJJJ5v.jpg",
+    "budget": 49000000,
+    "homepage": "https://www.paramount.com/movies/dora-and-lost-city-gold",
+    "imdb_id": "tt7547410",
+    "tmdb_id": 499701,
+    "name": "Dora and the Lost City of Gold",
+    "overview": "Dora, a girl who has spent most of her life exploring the jungle with her parents, now must navigate her most dangerous adventure yet: high school. Always the explorer, Dora quickly finds herself leading Boots (her best friend, a monkey), Diego, and a rag tag group of teens on an adventure to save her parents and solve the impossible mystery behind a lost Inca civilization.",
+    "popularity": 147.25,
+    "release_date": "2019-08-08",
+    "revenue": 115810923,
+    "runtime": 102,
+    "status": "Released",
+    "vote_average": 6.5,
+    "vote_count": 261,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 5,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/iGnCzXEx0cFlUbpyAMeHwHWhPhx.jpg",
+    "poster_url": "/4E2lyUGLEr3yH4q6kJxPkQUhX7n.jpg",
+    "budget": 0,
+    "homepage": "https://one-piece.com/comicsanime/movie/detail/14.html",
+    "imdb_id": "tt9430698",
+    "tmdb_id": 568012,
+    "name": "One Piece: Stampede",
+    "overview": "One Piece: Stampede is a stand-alone film that celebrates the anime's 20th Anniversary and takes place outside the canon of the \"One Piece\" TV series. Monkey D. Luffy and his Straw Hat pirate crew are invited to a massive Pirate Festival that brings many of the most iconic characters from throughout the franchise to participate in competition with the Straw Hats to find Roger's treasure. It also pits the Straw Hats against a new enemy named Bullet, a former member of Roger's crew.",
+    "popularity": 121.495,
+    "release_date": "2019-08-09",
+    "revenue": 0,
+    "runtime": 101,
+    "status": "Released",
+    "vote_average": 7.3,
+    "vote_count": 80,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 6,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/1nm0sk8UUx9jHCTHuMKe2jkt4Pn.jpg",
+    "poster_url": "/p69QzIBbN06aTYqRRiCOY1emNBh.jpg",
+    "budget": 0,
+    "homepage": "http://www.doctorsleepmovie.net/",
+    "imdb_id": "tt5606664",
+    "tmdb_id": 501170,
+    "name": "Doctor Sleep",
+    "overview": "A traumatized, alcoholic Dan Torrance meets Abra, a kid who also has the ability to \"shine.\" He tries to protect her from the True Knot, a cult whose goal is to feed off of people like them in order to remain immortal.",
+    "popularity": 110.878,
+    "release_date": "2019-10-30",
+    "revenue": 0,
+    "runtime": 152,
+    "status": "Released",
+    "vote_average": 7.1,
+    "vote_count": 299,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 7,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/3uG3aOhEzFCjcQulsJQiAzLSrw8.jpg",
+    "poster_url": "/g4z7mDmJmx23vsVg6XNWcnXb6gc.jpg",
+    "budget": 12000000,
+    "homepage": "https://www.47metersdownuncagedmovie.com",
+    "imdb_id": "tt7329656",
+    "tmdb_id": 480105,
+    "name": "47 Meters Down: Uncaged",
+    "overview": "A group of backpackers diving in a ruined underwater city discover that they have stumbled into the territory of the ocean's deadliest shark species.",
+    "popularity": 77.493,
+    "release_date": "2019-08-15",
+    "revenue": 0,
+    "runtime": 90,
+    "status": "Released",
+    "vote_average": 5.0,
+    "vote_count": 197,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 8,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/zIZv4pPJRg3YTnWWuotwXnYu1fM.jpg",
+    "poster_url": "/tximyCXMEnWIIyOy9STkOduUprG.jpg",
+    "budget": 20000000,
+    "homepage": "https://www.goodboysmovie.com/",
+    "imdb_id": "tt7343762",
+    "tmdb_id": 521777,
+    "name": "Good Boys",
+    "overview": "A group of young boys on the cusp of becoming teenagers embark on an epic quest to fix their broken drone before their parents get home.",
+    "popularity": 72.321,
+    "release_date": "2019-08-14",
+    "revenue": 72457330,
+    "runtime": 89,
+    "status": "Released",
+    "vote_average": 6.5,
+    "vote_count": 362,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 9,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/9REB0BCTk2RueTj5PuELYRYJN5e.jpg",
+    "poster_url": "/tXTccijjTnpXWFEMaHC1gp59cNc.jpg",
+    "budget": 0,
+    "homepage": "https://www.netflix.com/title/80201542",
+    "imdb_id": "tt1950235",
+    "tmdb_id": 295151,
+    "name": "Let It Snow",
+    "overview": "When a huge blizzard (that doesn't show signs of stopping) hits, Gracetown is completely snowed in. But even though it's cold outside, things are heating up inside, proving that Christmas is magical when it comes to love.",
+    "popularity": 95.424,
+    "release_date": "2019-11-08",
+    "revenue": 0,
+    "runtime": 93,
+    "status": "Released",
+    "vote_average": 6.3,
+    "vote_count": 124,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 10,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/ijiE9WoGSwSzM16zTxvUneJ8RXc.jpg",
+    "poster_url": "/ePXuKdXZuJx8hHMNr2yM4jY2L7Z.jpg",
+    "budget": 6000000,
+    "homepage": "https://www.netflix.com/title/81078819",
+    "imdb_id": "tt9243946",
+    "tmdb_id": 559969,
+    "name": "El Camino: A Breaking Bad Movie",
+    "overview": "In the wake of his dramatic escape from captivity, Jesse Pinkman must come to terms with his past in order to forge some kind of future.",
+    "popularity": 85.815,
+    "release_date": "2019-10-11",
+    "revenue": 0,
+    "runtime": 123,
+    "status": "Released",
+    "vote_average": 7.1,
+    "vote_count": 1376,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 11,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/oMAhce30UvkgJwlzMwsuLaPJ5cG.jpg",
+    "poster_url": "/8u0QBGUbZcBW59VEAdmeFl9g98N.jpg",
+    "budget": 0,
+    "homepage": "https://www.netflix.com/title/80182016",
+    "imdb_id": "tt7984766",
+    "tmdb_id": 504949,
+    "name": "The King",
+    "overview": "England, 15th century. Hal, a capricious prince who lives among the populace far from court, is forced by circumstances to reluctantly accept the throne and become Henry V.",
+    "popularity": 83.744,
+    "release_date": "2019-10-11",
+    "revenue": 0,
+    "runtime": 140,
+    "status": "Released",
+    "vote_average": 7.2,
+    "vote_count": 431,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 12,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/8moTOzunF7p40oR5XhlDvJckOSW.jpg",
+    "poster_url": "/zfE0R94v1E8cuKAerbskfD3VfUt.jpg",
+    "budget": 79000000,
+    "homepage": "http://www.it-movie.net/",
+    "imdb_id": "tt7349950",
+    "tmdb_id": 474350,
+    "name": "It Chapter Two",
+    "overview": "27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call.",
+    "popularity": 66.028,
+    "release_date": "2019-09-04",
+    "revenue": 447554518,
+    "runtime": 169,
+    "status": "Released",
+    "vote_average": 6.9,
+    "vote_count": 1928,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 13,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/c3F4P2oauA7IQmy4hM0OmRt2W7d.jpg",
+    "poster_url": "/uTALxjQU8e1lhmNjP9nnJ3t2pRU.jpg",
+    "budget": 138000000,
+    "homepage": null,
+    "imdb_id": "tt1025100",
+    "tmdb_id": 453405,
+    "name": "Gemini Man",
+    "overview": "Henry Brogen, an aging assassin tries to get out of the business but finds himself in the ultimate battle: fighting his own clone who is 25 years younger than him and at the peak of his abilities.",
+    "popularity": 63.872,
+    "release_date": "2019-10-02",
+    "revenue": 59552372,
+    "runtime": 117,
+    "status": "Released",
+    "vote_average": 5.7,
+    "vote_count": 520,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 14,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/1ZSjrBUHP2jm1QlQEyLGufL289q.jpg",
+    "poster_url": "/xL1yNzwGSXfassYpt13hXADpz6R.jpg",
+    "budget": 100000000,
+    "homepage": null,
+    "imdb_id": "tt6924650",
+    "tmdb_id": 522162,
+    "name": "Midway",
+    "overview": "The story of the soldiers and aviators who helped turn the tide of the Second World War during the iconic Battle of Midway in June 1942.",
+    "popularity": 75.752,
+    "release_date": "2019-11-06",
+    "revenue": 0,
+    "runtime": 138,
+    "status": "Released",
+    "vote_average": 6.1,
+    "vote_count": 47,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 15,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/jCCdt0e8Xe9ttvevD4S3TSMNdH.jpg",
+    "poster_url": "/pIcV8XXIIvJCbtPoxF9qHMKdRr2.jpg",
+    "budget": 48000000,
+    "homepage": "https://www.zombieland.com/",
+    "imdb_id": "tt1560220",
+    "tmdb_id": 338967,
+    "name": "Zombieland: Double Tap",
+    "overview": "Columbus, Tallahassee, Wichita, and Little Rock move to the American heartland as they face off against evolved zombies, fellow survivors, and the growing pains of the snarky makeshift family.",
+    "popularity": 72.499,
+    "release_date": "2019-10-09",
+    "revenue": 32000000,
+    "runtime": 99,
+    "status": "Released",
+    "vote_average": 7.3,
+    "vote_count": 345,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 16,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+    "poster_url": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "budget": 11363000,
+    "homepage": null,
+    "imdb_id": "tt6751668",
+    "tmdb_id": 496243,
+    "name": "Parasite",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "popularity": 70.117,
+    "release_date": "2019-05-30",
+    "revenue": 102949900,
+    "runtime": 132,
+    "status": "Released",
+    "vote_average": 8.5,
+    "vote_count": 1165,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 17,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/stemLQMLDrlpfIlZ5OjllOPT8QX.jpg",
+    "poster_url": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+    "budget": 55000000,
+    "homepage": "https://www.johnwick.movie",
+    "imdb_id": "tt6146586",
+    "tmdb_id": 458156,
+    "name": "John Wick: Chapter 3 - Parabellum",
+    "overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin\u2019s guild, the High Table, John Wick is excommunicado, but the world\u2019s most ruthless hit men and women await his every turn.",
+    "popularity": 62.69,
+    "release_date": "2019-05-15",
+    "revenue": 323398440,
+    "runtime": 131,
+    "status": "Released",
+    "vote_average": 7.1,
+    "vote_count": 3161,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 18,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/vQYwarUtaeyDYgwmcaTJYX1yix2.jpg",
+    "poster_url": "/jIbTPKCRWgmS2HaafKXeRaPHMGp.jpg",
+    "budget": 0,
+    "homepage": null,
+    "imdb_id": "tt8623904",
+    "tmdb_id": 549053,
+    "name": "Last Christmas",
+    "overview": "Kate is a young woman subscribed to bad decisions. Her last date with disaster? That of having accepted to work as Santa's elf for a department store. However, she meets Tom there. Her life takes a new turn. For Kate, it seems too good to be true.",
+    "popularity": 57.756,
+    "release_date": "2019-11-07",
+    "revenue": 0,
+    "runtime": 102,
+    "status": "Released",
+    "vote_average": 6.4,
+    "vote_count": 22,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 19,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/cXyfAViYly0Lk2CVpEKgYbt9wKQ.jpg",
+    "poster_url": "/fgGzTEoNxptCRtEOpOPvIEdlxAq.jpg",
+    "budget": 0,
+    "homepage": "https://www.focusfeatures.com/the-dead-dont-die",
+    "imdb_id": "tt8695030",
+    "tmdb_id": 535581,
+    "name": "The Dead Don't Die",
+    "overview": "In a small peaceful town, zombies suddenly rise to terrorize the town. Now three bespectacled police officers and a strange Scottish morgue expert must band together to defeat the undead.",
+    "popularity": 56.77,
+    "release_date": "2019-05-15",
+    "revenue": 12104595,
+    "runtime": 104,
+    "status": "Released",
+    "vote_average": 5.5,
+    "vote_count": 713,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 20,
+  "fields": {
+    "is_movie": true,
+    "backdrop_url": "/nGJpQCAn2NKeDoEflLI5DIvsqoQ.jpg",
+    "poster_url": "/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+    "budget": 95000000,
+    "homepage": "http://www.onceuponatimeinhollywood.movie",
+    "imdb_id": "tt7131622",
+    "tmdb_id": 466272,
+    "name": "Once Upon a Time... in Hollywood",
+    "overview": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+    "popularity": 48.046,
+    "release_date": "2019-07-25",
+    "revenue": 366612689,
+    "runtime": 161,
+    "status": "Released",
+    "vote_average": 7.6,
+    "vote_count": 2575,
+    "type": null,
+    "episode_runtime": null,
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 21,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/mzzHr6g1yvZ05Mc7hNj3tUdy2bM.jpg",
+    "poster_url": "/qJdfO3ahgAMf2rcmhoqngjBBZW1.jpg",
+    "budget": null,
+    "homepage": "http://www.adultswim.com/videos/rick-and-morty",
+    "imdb_id": null,
+    "tmdb_id": 60625,
+    "name": "Rick and Morty",
+    "overview": "Rick is a mentally-unbalanced but scientifically-gifted old man who has recently reconnected with his family. He spends most of his time involving his young grandson Morty in dangerous, outlandish adventures throughout space and alternate universes. Compounded with Morty's already unstable family life, these events cause Morty much distress at home and school.",
+    "popularity": 466.554,
+    "release_date": "2013-12-02",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 8.6,
+    "vote_count": 1454,
+    "type": "Scripted",
+    "episode_runtime": 22,
+    "number_of_episodes": 36,
+    "number_of_seasons": 4,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 22,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/9yKCJTOh9m3Lol2RY3kw99QPH6x.jpg",
+    "poster_url": "/xOjRNnQw5hqR1EULJ2iHkGwJVA4.jpg",
+    "budget": null,
+    "homepage": "https://www.bbc.co.uk/programmes/m000b1v2",
+    "imdb_id": null,
+    "tmdb_id": 68507,
+    "name": "His Dark Materials",
+    "overview": "Lyra is an orphan who lives in a parallel universe in which science, theology and magic are entwined. Lyra's search for a kidnapped friend uncovers a sinister plot involving stolen children, and turns into a quest to understand a mysterious phenomenon called Dust. She is later joined on her journey by Will, a boy who possesses a knife that can cut windows between worlds. As Lyra learns the truth about her parents and her prophesied destiny, the two young people are caught up in a war against celestial powers that ranges across many worlds.",
+    "popularity": 310.104,
+    "release_date": "2019-11-03",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 8.0,
+    "vote_count": 34,
+    "type": "Scripted",
+    "episode_runtime": 59,
+    "number_of_episodes": 8,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 23,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/o9OKe3M06QMLOzTl3l6GStYtnE9.jpg",
+    "poster_url": "/KoYWXbnYuS3b0GyQPkbuexlVK9.jpg",
+    "budget": null,
+    "homepage": "http://www.cwtv.com/shows/supernatural",
+    "imdb_id": null,
+    "tmdb_id": 1622,
+    "name": "Supernatural",
+    "overview": "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
+    "popularity": 290.232,
+    "release_date": "2005-09-13",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.4,
+    "vote_count": 2031,
+    "type": "Scripted",
+    "episode_runtime": 45,
+    "number_of_episodes": 313,
+    "number_of_seasons": 15,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 24,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/dXTyVDTIgeByvUOUEiHjbi8xX9A.jpg",
+    "poster_url": "/gKG5QGz5Ngf8fgWpBsWtlg5L2SF.jpg",
+    "budget": null,
+    "homepage": "http://www.cwtv.com/shows/arrow",
+    "imdb_id": null,
+    "tmdb_id": 1412,
+    "name": "Arrow",
+    "overview": "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
+    "popularity": 249.875,
+    "release_date": "2012-10-10",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 5.8,
+    "vote_count": 2795,
+    "type": "Scripted",
+    "episode_runtime": 42,
+    "number_of_episodes": 170,
+    "number_of_seasons": 8,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 25,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/jEdce7g6VZHMoJ7DANX8NFQkVAW.jpg",
+    "poster_url": "/jVObyxtNxuPbG5czuKvm7pW56EV.jpg",
+    "budget": null,
+    "homepage": "http://www.4-blocks.de",
+    "imdb_id": null,
+    "tmdb_id": 71641,
+    "name": "4 Blocks",
+    "overview": "Based in Neuk\u00f6lln, Berlin Toni manages the daily business of dealing with the Arabic gangs and ends up wanting to leave his old life behind for his family, but as expected, its never that simple.",
+    "popularity": 194.086,
+    "release_date": "2017-05-08",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.4,
+    "vote_count": 28,
+    "type": "Scripted",
+    "episode_runtime": 50,
+    "number_of_episodes": 19,
+    "number_of_seasons": 3,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 26,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/f5uNbUC76oowt5mt5J9QlqrIYQ6.jpg",
+    "poster_url": "/yTZQkSsxUFJZJe67IenRM0AEklc.jpg",
+    "budget": null,
+    "homepage": "http://www.thesimpsons.com/",
+    "imdb_id": null,
+    "tmdb_id": 456,
+    "name": "The Simpsons",
+    "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
+    "popularity": 173.881,
+    "release_date": "1989-12-17",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.2,
+    "vote_count": 2232,
+    "type": "Scripted",
+    "episode_runtime": 22,
+    "number_of_episodes": 670,
+    "number_of_seasons": 31,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 27,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/6ZdQTBy20HzWudZthAV7NkZWfIb.jpg",
+    "poster_url": "/wHa6KOJAoNTFLFtp7wguUJKSnju.jpg",
+    "budget": null,
+    "homepage": "http://www.cwtv.com/shows/the-flash/",
+    "imdb_id": null,
+    "tmdb_id": 60735,
+    "name": "The Flash",
+    "overview": "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
+    "popularity": 163.946,
+    "release_date": "2014-10-07",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.7,
+    "vote_count": 2981,
+    "type": "Scripted",
+    "episode_runtime": 44,
+    "number_of_episodes": 123,
+    "number_of_seasons": 6,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 28,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/pH38r4TWTqq7Mcs6XAlwgzNUeJe.jpg",
+    "poster_url": "/gBGUL1UTUNmdRQT8gA1LUV4yg39.jpg",
+    "budget": null,
+    "homepage": "http://www.fox.com/familyguy/",
+    "imdb_id": null,
+    "tmdb_id": 1434,
+    "name": "Family Guy",
+    "overview": "Sick, twisted, politically incorrect and Freakin' Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois have three kids. Stewie (a brilliant but sadistic baby bent on killing his mother and taking over the world), Meg (the oldest, and is the most unpopular girl in town) and Chris (the middle kid, he's not very bright but has a passion for movies). The final member of the family is Brian - a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.",
+    "popularity": 154.215,
+    "release_date": "1999-01-31",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.5,
+    "vote_count": 1714,
+    "type": "Scripted",
+    "episode_runtime": 22,
+    "number_of_episodes": 336,
+    "number_of_seasons": 18,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 29,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/8TOkxONO3TEeJRuZWb0hG7SboyV.jpg",
+    "poster_url": "/g3JsScc7mQCfc3e5e5rXwu7xVVP.jpg",
+    "budget": null,
+    "homepage": "http://apple.co/See",
+    "imdb_id": null,
+    "tmdb_id": 80752,
+    "name": "See",
+    "overview": "A virus has decimated humankind. Those who survived emerged blind. Centuries later when twins are born with the mythic ability to see, their father must protect his tribe against a threatened queen.",
+    "popularity": 136.999,
+    "release_date": "2019-11-01",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.4,
+    "vote_count": 53,
+    "type": "Scripted",
+    "episode_runtime": 60,
+    "number_of_episodes": 5,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 30,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/edmk8xjGBsYVIf4QtLY9WMaMcXZ.jpg",
+    "poster_url": "/jnsvc7gCKocXnrTXF6p03cICTWb.jpg",
+    "budget": null,
+    "homepage": "http://abc.go.com/shows/greys-anatomy",
+    "imdb_id": null,
+    "tmdb_id": 1416,
+    "name": "Grey's Anatomy",
+    "overview": "Follows the personal and professional lives of a group of doctors at Seattle\u2019s Grey Sloan Memorial Hospital.",
+    "popularity": 124.175,
+    "release_date": "2005-03-27",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.4,
+    "vote_count": 1104,
+    "type": "Scripted",
+    "episode_runtime": 43,
+    "number_of_episodes": 350,
+    "number_of_seasons": 16,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 31,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/spc5mNkW2daK1ob7Z7jqNkSlKS2.jpg",
+    "poster_url": "/jnaimWkIVSD9IInmZPyLYarSvvc.jpg",
+    "budget": null,
+    "homepage": "https://www.cwtv.com/shows/batwoman",
+    "imdb_id": null,
+    "tmdb_id": 89247,
+    "name": "Batwoman",
+    "overview": "Kate Kane, armed with a passion for social justice and a flair for speaking her mind, soars onto the streets of Gotham as Batwoman, an out lesbian and highly trained street fighter primed to snuff out the failing city's criminal resurgence. But don't call her a hero yet. In a city desperate for a savior, Kate must overcome her own demons before embracing the call to be Gotham's symbol of hope",
+    "popularity": 121.303,
+    "release_date": "2019-10-06",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.1,
+    "vote_count": 134,
+    "type": "Scripted",
+    "episode_runtime": 42,
+    "number_of_episodes": 9,
+    "number_of_seasons": 1,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 32,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/cD9PxbrdWYgL7MUpD9eOYuiSe2P.jpg",
+    "poster_url": "/6t6r1VGQTTQecN4V0sZeqsmdU9g.jpg",
+    "budget": null,
+    "homepage": "http://www.nbc.com/law-and-order-special-victims-unit",
+    "imdb_id": null,
+    "tmdb_id": 2734,
+    "name": "Law & Order: Special Victims Unit",
+    "overview": "In the criminal justice system, sexually-based offenses are considered especially heinous. In New York City, the dedicated detectives who investigate these vicious felonies are members of an elite squad known as the Special Victims Unit. These are their stories.",
+    "popularity": 120.829,
+    "release_date": "1999-09-20",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.5,
+    "vote_count": 727,
+    "type": "Scripted",
+    "episode_runtime": 43,
+    "number_of_episodes": 467,
+    "number_of_seasons": 21,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 33,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/1ccgQ6IJyEc8UHPtGeFFeRqMVnc.jpg",
+    "poster_url": "/m2gf7SYOq9z30Q1dJFMF51DfrmF.jpg",
+    "budget": null,
+    "homepage": "http://www.sho.com/shameless",
+    "imdb_id": null,
+    "tmdb_id": 34307,
+    "name": "Shameless",
+    "overview": "Chicagoan Frank Gallagher is the proud single dad of six smart, industrious, independent kids, who without him would be... perhaps better off. When Frank's not at the bar spending what little money they have, he's passed out on the floor. But the kids have found ways to grow up in spite of him. They may not be like any family you know, but they make no apologies for being exactly who they are.",
+    "popularity": 120.378,
+    "release_date": "2011-01-09",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.9,
+    "vote_count": 900,
+    "type": "Scripted",
+    "episode_runtime": 60,
+    "number_of_episodes": 118,
+    "number_of_seasons": 10,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 34,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/mSDKNVvDfitFE6Fb6fSSl5DQmgS.jpg",
+    "poster_url": "/v9zc0cZpy5aPSfAy6Tgb6I1zWgV.jpg",
+    "budget": null,
+    "homepage": "http://southpark.cc.com/",
+    "imdb_id": null,
+    "tmdb_id": 2190,
+    "name": "South Park",
+    "overview": "Follows the misadventures of four irreverent grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.",
+    "popularity": 110.873,
+    "release_date": "1997-08-13",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.8,
+    "vote_count": 1186,
+    "type": "Scripted",
+    "episode_runtime": 22,
+    "number_of_episodes": 305,
+    "number_of_seasons": 23,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 35,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/fHwiAqIKragaCbNJo9Qs4lrccIN.jpg",
+    "poster_url": "/bgbQCW4fE9b6wSOSC6Fb4FfVzsW.jpg",
+    "budget": null,
+    "homepage": "http://www.nbc.com/the-blacklist",
+    "imdb_id": null,
+    "tmdb_id": 46952,
+    "name": "The Blacklist",
+    "overview": "Raymond \"Red\" Reddington, one of the FBI's most wanted fugitives, surrenders in person at FBI Headquarters in Washington, D.C. He claims that he and the FBI have the same interests: bringing down dangerous criminals and terrorists. In the last two decades, he's made a list of criminals and terrorists that matter the most but the FBI cannot find because it does not know they exist. Reddington calls this \"The Blacklist\". Reddington will co-operate, but insists that he will speak only to Elizabeth Keen, a rookie FBI profiler.",
+    "popularity": 105.344,
+    "release_date": "2013-09-23",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.0,
+    "vote_count": 1082,
+    "type": "Scripted",
+    "episode_runtime": 43,
+    "number_of_episodes": 140,
+    "number_of_seasons": 7,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 36,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/2IUpoKSP64r6rp2vBo0Fdk8a1UU.jpg",
+    "poster_url": "/4X7o1ssOEvp4BFLim1AZmPNcYbU.jpg",
+    "budget": null,
+    "homepage": "http://www.cwtv.com/shows/riverdale/",
+    "imdb_id": null,
+    "tmdb_id": 69050,
+    "name": "Riverdale",
+    "overview": "Set in the present, the series offers a bold, subversive take on Archie, Betty, Veronica and their friends, exploring the surreality of small-town life, the darkness and weirdness bubbling beneath Riverdale\u2019s wholesome facade.",
+    "popularity": 104.282,
+    "release_date": "2017-01-26",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.2,
+    "vote_count": 724,
+    "type": "Scripted",
+    "episode_runtime": 45,
+    "number_of_episodes": 64,
+    "number_of_seasons": 4,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 37,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/3x1lVyxtsLKsZyR2E3qRe1EAXG4.jpg",
+    "poster_url": "/4ka8vAzAFUZFKxWyfGfwVcSXuZo.jpg",
+    "budget": null,
+    "homepage": "http://cwtv.com/shows/supergirl",
+    "imdb_id": null,
+    "tmdb_id": 62688,
+    "name": "Supergirl",
+    "overview": "Twenty-four-year-old Kara Zor-El, who was taken in by the Danvers family when she was 13 after being sent away from Krypton, must learn to embrace her powers after previously hiding them. The Danvers teach her to be careful with her powers, until she has to reveal them during an unexpected disaster, setting her on her journey of heroism.",
+    "popularity": 104.078,
+    "release_date": "2015-10-26",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 5.9,
+    "vote_count": 1081,
+    "type": "Scripted",
+    "episode_runtime": 42,
+    "number_of_episodes": 96,
+    "number_of_seasons": 5,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 38,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/1gGRY9bnIc0Jaohgc6jNFidjgLK.jpg",
+    "poster_url": "/uR2K0Ui9UsOqnzb5IrV6tLUcUHl.jpg",
+    "budget": null,
+    "homepage": "https://www.fxnetworks.com/shows/american-horror-story",
+    "imdb_id": null,
+    "tmdb_id": 1413,
+    "name": "American Horror Story",
+    "overview": "An anthology horror drama series centering on different characters and locations, including a house with a murderous past, an asylum, a witch coven, a freak show, a hotel, a farmhouse in Roanoke and a cult.",
+    "popularity": 87.746,
+    "release_date": "2011-10-05",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.9,
+    "vote_count": 1209,
+    "type": "Scripted",
+    "episode_runtime": 43,
+    "number_of_episodes": 103,
+    "number_of_seasons": 9,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 39,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/4VuCtYBvZGq6Rk3gloigwlsTefE.jpg",
+    "poster_url": "/fi8EvaWtL5CvoielOjjVvTr7ux3.jpg",
+    "budget": null,
+    "homepage": "http://www.cbs.com/shows/ncis/",
+    "imdb_id": null,
+    "tmdb_id": 4614,
+    "name": "NCIS",
+    "overview": "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
+    "popularity": 87.638,
+    "release_date": "2003-09-23",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 6.8,
+    "vote_count": 857,
+    "type": "Scripted",
+    "episode_runtime": 45,
+    "number_of_episodes": 386,
+    "number_of_seasons": 17,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.title",
+  "pk": 40,
+  "fields": {
+    "is_movie": false,
+    "backdrop_url": "/wblSifvXAlqAYqEUoXmhpzeau7b.jpg",
+    "poster_url": "/rb64COqdpRRfWOc6gWTfC7WxzXP.jpg",
+    "budget": null,
+    "homepage": "http://www.cwtv.com/shows/legacies",
+    "imdb_id": null,
+    "tmdb_id": 79460,
+    "name": "Legacies",
+    "overview": "In a place where young witches, vampires, and werewolves are nurtured to be their best selves in spite of their worst impulses, Klaus Mikaelson\u2019s daughter, 17-year-old Hope Mikaelson, Alaric Saltzman\u2019s twins, Lizzie and Josie Saltzman, among others, come of age into heroes and villains at The Salvatore School for the Young and Gifted.",
+    "popularity": 83.721,
+    "release_date": "2018-10-25",
+    "revenue": null,
+    "runtime": null,
+    "status": "Returning Series",
+    "vote_average": 7.8,
+    "vote_count": 209,
+    "type": "Scripted",
+    "episode_runtime": 43,
+    "number_of_episodes": 23,
+    "number_of_seasons": 2,
+    "last_air_date": null
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Action",
+    "titles": [
+      2,
+      5,
+      13,
+      14,
+      15,
+      17,
+      37
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Adventure",
+    "titles": [
+      3,
+      4,
+      5,
+      7,
+      37
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Animation",
+    "titles": [
+      5,
+      21,
+      26,
+      28,
+      34
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Comedy",
+    "titles": [
+      4,
+      8,
+      9,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      26,
+      28,
+      33,
+      34
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Crime",
+    "titles": [
+      1,
+      10,
+      17,
+      24,
+      31,
+      32,
+      35,
+      39
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Documentary",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Drama",
+    "titles": [
+      1,
+      10,
+      11,
+      13,
+      14,
+      16,
+      18,
+      20,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29,
+      30,
+      32,
+      33,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Family",
+    "titles": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Fantasy",
+    "titles": [
+      3,
+      19
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 10,
+  "fields": {
+    "name": "History",
+    "titles": [
+      11,
+      14
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Horror",
+    "titles": [
+      6,
+      7,
+      12,
+      15,
+      19
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Music",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Mystery",
+    "titles": [
+      23,
+      24,
+      31,
+      35,
+      36,
+      38,
+      40
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Romance",
+    "titles": [
+      9,
+      18
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 15,
+  "fields": {
+    "name": "Science Fiction",
+    "titles": [
+      2,
+      37
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 16,
+  "fields": {
+    "name": "TV Movie",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 17,
+  "fields": {
+    "name": "Thriller",
+    "titles": [
+      1,
+      7,
+      10,
+      16,
+      17
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 18,
+  "fields": {
+    "name": "War",
+    "titles": [
+      11,
+      14
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 19,
+  "fields": {
+    "name": "Western",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 20,
+  "fields": {
+    "name": "Action & Adventure",
+    "titles": [
+      21,
+      24,
+      31,
+      39
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 21,
+  "fields": {
+    "name": "Kids",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 22,
+  "fields": {
+    "name": "News",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 23,
+  "fields": {
+    "name": "Reality",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 24,
+  "fields": {
+    "name": "Sci-Fi & Fantasy",
+    "titles": [
+      21,
+      22,
+      23,
+      27,
+      29,
+      31,
+      38,
+      40
+    ]
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 25,
+  "fields": {
+    "name": "Soap",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 26,
+  "fields": {
+    "name": "Talk",
+    "titles": []
+  }
+},
+{
+  "model": "titles.genre",
+  "pk": 27,
+  "fields": {
+    "name": "War & Politics",
+    "titles": []
+  }
+}
+]
