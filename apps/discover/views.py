@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from titles.models import Title, Genre
+from apps.titles.models import Title, Genre
 
 
 def index(request):

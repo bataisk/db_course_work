@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='genres',
             name='titles',
-            field=models.ManyToManyField(db_table='title_genre', to='titles.Titles'),
+            field=models.ManyToManyField(db_table='title_genre', to='apps.titles.Titles'),
         ),
         migrations.AlterModelTable(
             name='genres',

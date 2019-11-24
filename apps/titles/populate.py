@@ -1,5 +1,4 @@
 import requests
-from pprint import pprint as pp
 import json
 
 
@@ -7,7 +6,7 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_movie_db.settings')
 import django
 django.setup()
-from titles.models import Genre
+from apps.titles.models import Genre
 from django.core.exceptions import ObjectDoesNotExist
 
 
