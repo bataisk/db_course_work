@@ -14,17 +14,17 @@
         <nav class="content">
             <ul>
                 <li class='logo'>
-                    <a href="base.html"><img src="{% static 'logo.svg' %}" alt="Logo" width="81" height="72"></a>
+                    <a href="{% url 'index' %}"><img src="{% static 'logo.svg' %}" alt="Logo" width="81" height="72"></a>
                 </li>
                 <li>
-                    <a href="discovery.html">DISCOVER</a>
+                    <a href="{% url 'discover_movie' %}">DISCOVER</a>
                     <ul class="hide">
-                        <li><a href="discovery.html">Movies</a></li>
-                        <li><a href="https://www.themoviedb.org/discover/tv">TV Shows</a></li>
+                        <li><a href="{% url 'discover_movie' %}">Movies</a></li>
+                        <li><a href="{% url 'discover_show' %}">TV Shows</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="discovery.html">MOVIES</a>
+                    <a href="">MOVIES</a>
                     <ul class="hide">
                         <li><a href="">Popular</a></li>
                         <li><a href="">Top Rated</a></li>
