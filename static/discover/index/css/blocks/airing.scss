@@ -1,0 +1,55 @@
+.on_air {
+  width: 1000px;
+  margin: 30px auto;
+  display: flex;
+
+  section {
+    width: 50%;
+  }
+
+  h2 {
+    color: $text-black;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+}
+
+.column {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  figure {
+    position: relative;
+  }
+  figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    h3 {
+      color: $text-white;
+      font-size: 19.2px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    p {
+      color: $text-white;
+      font-size: 14.4px;
+      font-weight: 500;
+    }
+  }
+
+  .nested {
+    position: relative;
+    display: inline-block;
+    width: 480px;
+
+    figcaption {
+      left: 65px;
+      bottom: 0;
+    }
+
+  }
+
+}
