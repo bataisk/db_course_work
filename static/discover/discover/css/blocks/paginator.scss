@@ -1,0 +1,23 @@
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+
+.pagination {
+
+  a, span {
+    font-weight: 600;
+    margin: 0 4px;
+    text-decoration: none;
+  }
+
+  .selected {
+    padding: 2px 8px;
+    border: 1px solid $black;
+    font-weight: normal;
+  }
+
+}
