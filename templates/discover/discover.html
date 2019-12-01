@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base/base.html' %}
 {% block title %}
     {% if is_movies_page %}
         Discover New Movies
@@ -6,33 +6,55 @@
         Discover New TV Shows
     {% endif %}
 {% endblock %}
+{% block additional_head_tags %}
+    <link rel="stylesheet" href="../../static/discover/discover/css/main.css">
+{% endblock %}
+
+
 {% load image_urls %}
 {% block main %}
     <main>
         <section class="main_content">
-            <h2>Discover New Movies & TV Shows <a href="">Movies</a> <a href="">TV Shows</a></h2>
-            <form method="post">
-                <label for="release_year">Year</label>
-                <select id="release_year">
-                    <option disabled>None</option>
-                    {% for year in years %}
-                        <option value="{{ year }}">{{ year }}</option>
-                    {% endfor %}
-                </select>
+            <h2>
+                Discover New Movies & TV Shows
+                {% if is_movies_page %}
+                    <a style="border-bottom: #00d573 1px solid" class="movies" href="{% url 'discover_movie' %}">Movies</a>
+                    <a class="shows" href="{% url 'discover_show' %}">TV Shows</a>
+                {% else %}
+                    <a class="movies" href="{% url 'discover_movie' %}">Movies</a>
+                    <a style="border-bottom: #2dd4f7 1px solid"  class="shows" href="{% url 'discover_show' %}">TV Shows</a>
+                {% endif %}
 
-                <label for="sort_by">Sort By</label>
-                <select id="sort_by">
-                    <option value="popularity_des">Popularity Descending</option>
-                    <option value="popularity_asc">Popularity Ascending</option>
-                </select>
-                <label for="with_genres">Genres</label>
-                <select id="with_genres" multiple>
-                    {% for genre in genres %}
-                         <option value="{{ genre.pk }}">{{ genre.name }}</option>
-                    {% endfor %}
-                </select>
-            </form>
+            </h2>
+            <div class="form-wrapper hide">
 
+                <form method="post" class="discover">
+                <div>
+                    <label for="release_year">Year</label>
+                    <select id="release_year">
+                        <option disabled>None</option>
+                        {% for year in years %}
+                            <option value="{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div>
+                    <label for="sort_by">Sort By</label>
+                    <select id="sort_by">
+                        <option value="popularity_des">Popularity Descending</option>
+                        <option value="popularity_asc">Popularity Ascending</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="with_genres">Genres</label>
+                    <select id="with_genres" multiple>
+                        {% for genre in genres %}
+                             <option value="{{ genre.pk }}">{{ genre.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                </form>
+            </div>
             <section class="result">
             {% for result in results %}
                 <div class="item">
@@ -43,16 +65,17 @@
                         </div>
                     </div>
                     <div class="info">
-                        <div>
-                            <canvas width="32" height="32">
+                        <div class="wrapper">
+                            <div class="user-rate">
+                                {{ result.vote_average|floatformat:2 }}
+                            </div>
 
-                            </canvas>
                             <div>
                                 <h3>{{ result.name }}</h3>
                                 <span>{{ result.release_date }}</span>
                             </div>
                         </div>
-                        <p class="description">{{ result.overview }}</p>
+                        <p class="description">{{ result.overview|truncatechars:255 }}</p>
                         <p class="more_info">More Info<a href="{{ result.get_absolute_url }}"></a></p>
                     </div>
                 </div>
@@ -60,20 +83,33 @@
             </section>
 
             <!-- start of pagination -->
+            <div class="pagination-wrapper">
             <div class="pagination">
-                <span class="selected">1</span>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">4</a>
-                <a href="">5</a>
-                <a href="">6</a>
-                <a href="">7</a>
-                <span>...</span>
-                <a href="">499</a>
-                <a href="">500</a>
-                <a href="">Next →</a>
+                {% if pages.is_previous_exist %}
+                    <a href="?page={{ pages.previous_page }}">← Previous</a>
+                {% endif %}
+                {% if pages.is_fists_exist %}
+                    <a href="?page=1">1</a>
+                    <a href="?page=2">2</a>
+                    <span>...</span>
+                {% endif %}
+                {% for page_number in pages.previous_pages %}
+                    <a href="?page={{ page_number }}">{{ page_number }}</a>
+                {% endfor %}
+                <span class="selected">{{ results.number }}</span>
+                {% for page_number in pages.next_pages %}
+                    <a href="?page={{ page_number }}">{{ page_number }}</a>
+                {% endfor %}
+                {% if pages.is_lasts_exist %}
+                    <span>...</span>
+                    <a href="?page={{ pages.last.0 }}">{{ pages.last.0 }}</a>
+                    <a href="?page={{ pages.last.1 }}">{{ pages.last.1 }}</a>
+                {% endif %}
+                {% if pages.is_next_exist %}
+                    <a href="?page={{ pages.next }}">Next →</a>
+                {% endif %}
             </div>
-
+            </div>
         </section>
     </main>
 {% endblock %}

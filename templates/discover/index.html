@@ -1,30 +1,26 @@
-{% extends 'base.html' %}
+{% extends 'base/base.html' %}
 {% block title %}
     The Movie Database (TMDb)
 {% endblock %}
 
 {% load image_urls %}
+
+{% block additional_head_tags %}
+    {% load static %}
+{#    <link rel="stylesheet" href="{% static 'discover/index/css/main.css' %}">#}
+    <link rel="stylesheet" href="../../static/discover/index/css/main.css">
+{% endblock %}
+
 {% block main %}
     <main>
-        <section class="new_stuff">
-            <div class="">
-                <h2><a href="">Discussions</a></h2>
-                <p><a href="">Catch up now</a></p>
-            </div>
-            <div class="">
-                <h2><a href="">That's a Wrap!</a></h2>
-                <p><a href="">Read the 2018 recap</a></p>
-            </div>
-        </section>
-
-        <div class="on_air">>
+        <div class="on_air">
             <section class="on_tv">
                 <h2>On TV</h2>
                 <div class="column">
                      <figure>
                         <a href="{{ first_show.get_absolute_url }}"><img src="{{ first_show|backdrop:'w500' }}" alt=""></a>
                         <figcaption>
-                            <figure>
+                            <figure class="nested">
                                 <a href="{{ first_show.get_absolute_url }}"><img src="{{ first_show|poster:'w58_and_h87_face' }}" alt=""></a>
                                 <figcaption>
                                     <h3>{{ first_show.name }}</h3>
@@ -33,7 +29,7 @@
                             </figure>
                         </figcaption>
                     </figure>
-                    <div class="">
+
                     {% for show in other_shows %}
                         <figure>
                             <a href="{{ show.get_absolute_url }}"><img src="{{ show|backdrop:'w250_and_h141_face' }}" alt=""></a>
@@ -43,14 +39,12 @@
                             </figcaption>
                         </figure>
                     {% endfor %}
-                    </div>
                 </div>
             </section>
 
             <section class="in_theaters">
                 <h2>In Theaters</h2>
                 <div class="column">
-                    <div class="">
                     {% for movie in other_movies %}
                         <figure>
                             <a href="{{ movie.get_absolute_url }}"><img src="{{ movie|backdrop:'w250_and_h141_face' }}" alt=""></a>
@@ -60,58 +54,57 @@
                             </figcaption>
                         </figure>
                     {% endfor %}
-                        <figure>
-                            <a href="{{ last_movie.get_absolute_url }}"><img src="{{ last_movie|backdrop:'w500' }}" alt=""></a>
-                            <figcaption>
-                                <figure>
-                                    <a href="{{ last_movie.get_absolute_url }}"><img src="{{ last_movie|poster:'w58_and_h87_face' }}" alt="Joker poster"></a>
-                                    <figcaption>
-                                        <h3>{{ last_movie.name }}</h3>
-                                        <p>Robert De Niro, Joaquin Phoenix, Zazie Beetz</p>
-                                    </figcaption>
-                                </figure>
-                            </figcaption>
-                        </figure>
-                    </div>
+                    <figure>
+                        <a href="{{ last_movie.get_absolute_url }}"><img src="{{ last_movie|backdrop:'w500' }}" alt=""></a>
+                        <figcaption>
+                            <figure class="nested">
+                                <a href="{{ last_movie.get_absolute_url }}"><img src="{{ last_movie|poster:'w58_and_h87_face' }}" alt="Joker poster"></a>
+                                <figcaption>
+                                    <h3>{{ last_movie.name }}</h3>
+                                    <p>Robert De Niro, Joaquin Phoenix, Zazie Beetz</p>
+                                </figcaption>
+                            </figure>
+                        </figcaption>
+                    </figure>
                 </div>
             </section>
         </div>
 
-        <section class="lists">
-            <h2>Featured Lists</h2>
-            <ul>
-                <li>
-                    <figure>
-                        <a href=""><img src="static/index/dc_col_poster.jpg" alt="DC collection poster"></a>
-                        <figcaption>
-                            <h3><a href="">The DC Comics Universe</a></h3>
-                            <p>Man of Steel, Justice League, Batman v Superman: Dawn of Justice, 22 more...</p>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href=""><img src="static/index/sifi_col_poster.jpg" alt="SciFi collection poster"></a>
-                        <figcaption>
-                            <h3><a href="">Good Science Fiction Flicks</a></h3>
-                            <p>
-                                Guardians of the Galaxy, X-Men: Days of Future Past, Star Wars: The Force
-                                Awakens, 126 more...
-                            </p>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href=""><img src="static/index/disnay_col_poster.jpg" alt="Disney collection poster"></a>
-                        <figcaption>
-                            <h3><a href="">Disney Classic Collection</a></h3>
-                            <p>Snow White and the Seven Dwarfs, Fantasia, Pinocchio, 50 more...</p>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
+{#        <section class="lists">#}
+{#            <h2>Featured Lists</h2>#}
+{#            <ul>#}
+{#                <li>#}
+{#                    <figure>#}
+{#                        <a href=""><img src="static/index/dc_col_poster.jpg" alt="DC collection poster"></a>#}
+{#                        <figcaption>#}
+{#                            <h3><a href="">The DC Comics Universe</a></h3>#}
+{#                            <p>Man of Steel, Justice League, Batman v Superman: Dawn of Justice, 22 more...</p>#}
+{#                        </figcaption>#}
+{#                    </figure>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <figure>#}
+{#                        <a href=""><img src="static/index/sifi_col_poster.jpg" alt="SciFi collection poster"></a>#}
+{#                        <figcaption>#}
+{#                            <h3><a href="">Good Science Fiction Flicks</a></h3>#}
+{#                            <p>#}
+{#                                Guardians of the Galaxy, X-Men: Days of Future Past, Star Wars: The Force#}
+{#                                Awakens, 126 more...#}
+{#                            </p>#}
+{#                        </figcaption>#}
+{#                    </figure>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <figure>#}
+{#                        <a href=""><img src="static/index/disnay_col_poster.jpg" alt="Disney collection poster"></a>#}
+{#                        <figcaption>#}
+{#                            <h3><a href="">Disney Classic Collection</a></h3>#}
+{#                            <p>Snow White and the Seven Dwarfs, Fantasia, Pinocchio, 50 more...</p>#}
+{#                        </figcaption>#}
+{#                    </figure>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </section>#}
     </main>
 {% endblock %}
 

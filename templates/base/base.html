@@ -4,6 +4,9 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+    <link rel="stylesheet" href="{% static 'base/css/main.css' %}">
     {% block additional_head_tags %}
 
     {% endblock %}
@@ -12,9 +15,9 @@
     <!-- start of header -->
     <header>
         <nav class="content">
-            <ul>
+            <ul class="main-links">
                 <li class='logo'>
-                    <a href="{% url 'index' %}"><img src="{% static 'logo.svg' %}" alt="Logo" width="81" height="72"></a>
+                    <a href="{% url 'index' %}"><img src="{% static 'base/logo.svg' %}" alt="Logo" width="81" height="72"></a>
                 </li>
                 <li>
                     <a href="{% url 'discover_movie' %}">DISCOVER</a>
@@ -49,16 +52,16 @@
                 </li>
             </ul>
 
-            <ul>
+            <ul class="main-links">
                 <li>
                     <i></i>
-                    <p class="">Can't find a movie or TV show? Login to create it.</p>
+                    <p class="hide">Can't find a movie or TV show? Login to create it.</p>
                 </li>
                 <li><a href="log_in.html">LOGIN</a></li>
                 <li><a href="sing_up.html">SING UP</a></li>
             </ul>
         </nav>
-        <form method="post">
+        <form method="post" class="search">
             <input type="text" name="search_value" value="Search for a movie, tv show, person...">
         </form>
     </header>
@@ -70,11 +73,11 @@
     <!-- start of footer -->
     <footer>
         <nav>
-            <div class="">
-                <img src="{% static 'logo.svg' %}" alt="Logo" width="130" height="116">
+            <div class="join">
+                <img src="{% static 'base/logo.svg' %}" alt="Logo" width="130" height="116">
                 <a href="">Join the Community</a>
             </div>
-            <div class="">
+            <div>
                 <h3>The Basics</h3>
                 <ul>
                     <li><a href="">About TMDb</a></li>
@@ -84,7 +87,7 @@
                     <li><a href="">Blog</a></li>
                 </ul>
             </div>
-            <div class="">
+            <div>
                 <h3>Get Involved</h3>
                 <ul>
                     <li><a href="">Contribution Bible</a></li>
@@ -93,7 +96,7 @@
                     <li><a href="">Add New TV Show</a></li>
                 </ul>
             </div>
-            <div class="">
+            <div>
                 <h3>Community</h3>
                 <ul>
                     <li><a href="">Guidelines</a></li>
