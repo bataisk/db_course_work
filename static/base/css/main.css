@@ -1,0 +1,111 @@
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+header {
+  background-color: #081c24;
+}
+header .content {
+  width: 1000px;
+  height: 111px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.main-links {
+  display: inline-flex;
+  align-items: center;
+}
+.main-links li {
+  margin-right: 30px;
+  padding: 10px 0;
+}
+.main-links a {
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.main-links:nth-child(2) {
+  margin-left: auto;
+}
+
+.search {
+  width: 100%;
+  height: 46px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #acacac;
+  display: flex;
+  align-items: center;
+}
+.search input {
+  width: 1000px;
+  margin: 0 auto;
+  border: none;
+  color: #acacac;
+  font-style: italic;
+}
+
+footer {
+  width: 100%;
+  height: 450px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  background-image: url("https://www.themoviedb.org/assets/2/v4/footers_v2/Creed-fa6ea547c3225dfbb2b9db3e9c2cb41508771c7842b3a0d696951bcc0a6af327.jpg"), radial-gradient(at 30% top, #074034 0%, #081c24 70%);
+  box-sizing: border-box;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer nav {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer nav div {
+  margin-right: 20px;
+}
+footer nav h3 {
+  font-size: 20.16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+footer nav li {
+  line-height: 1.6em;
+}
+footer nav a {
+  text-decoration: none;
+  font-size: 17.28px;
+}
+
+.join {
+  position: relative;
+}
+.join img {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+}
+.join a {
+  color: #01d277;
+  font-size: 18.72px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  bottom: -120px;
+}
+
+/*# sourceMappingURL=main.css.map */

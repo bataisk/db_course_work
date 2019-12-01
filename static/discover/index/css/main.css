@@ -1,0 +1,49 @@
+.on_air {
+  width: 1000px;
+  margin: 30px auto;
+  display: flex;
+}
+.on_air section {
+  width: 50%;
+}
+.on_air h2 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.column {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.column figure {
+  position: relative;
+}
+.column figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.column figcaption h3 {
+  color: #ffffff;
+  font-size: 19.2px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.column figcaption p {
+  color: #ffffff;
+  font-size: 14.4px;
+  font-weight: 500;
+}
+.column .nested {
+  position: relative;
+  display: inline-block;
+  width: 480px;
+}
+.column .nested figcaption {
+  left: 65px;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
