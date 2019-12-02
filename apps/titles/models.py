@@ -32,7 +32,6 @@ class Title(models.Model):
         db_table = 'titles'
 
 
-
 class Genre(models.Model):
     is_movie_genre = models.BooleanField(default=True)
     is_both_genre = models.BooleanField(default=False)
