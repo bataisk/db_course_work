@@ -8,6 +8,7 @@ body {
 
 header {
   background-color: #081c24;
+  width: 100%;
 }
 header .content {
   width: 1000px;
@@ -21,9 +22,10 @@ header .content {
   display: inline-flex;
   align-items: center;
 }
-.main-links li {
+.main-links .main-link {
   margin-right: 30px;
   padding: 10px 0;
+  position: relative;
 }
 .main-links a {
   color: #ffffff;
@@ -31,7 +33,28 @@ header .content {
   text-decoration: none;
   font-weight: 600;
 }
-.main-links:nth-child(2) {
+.main-links .sub-list {
+  position: absolute;
+  height: auto;
+  display: none;
+}
+.main-links .sub-list li {
+  margin-right: 30px;
+  white-space: nowrap;
+}
+.main-links .sub-list a {
+  color: #868e91;
+  font-size: 0.9em;
+}
+.main-links .main-link:hover .sub-list {
+  display: inline-flex;
+  top: 35px;
+  left: 0;
+}
+.main-links .main-link:hover .left-80 {
+  left: -80px;
+}
+.main-links:nth-child(5) {
   margin-left: auto;
 }
 
@@ -51,6 +74,88 @@ header .content {
   font-style: italic;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 64px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(8, 28, 36, 0.95);
+  padding: 20px;
+}
+.mobile-menu ul {
+  line-height: 1.3;
+}
+.mobile-menu .sub-toggle:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu .sub-menu li {
+  padding-bottom: 6px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.mobile-menu .sub-menu li a {
+  text-decoration: none;
+  color: #868e91;
+  font-size: 0.9em;
+}
+.mobile-menu .small {
+  margin-top: 20px;
+}
+.mobile-menu .small a {
+  font-size: 1em;
+  color: #868e91;
+  text-decoration: none;
+}
+
+.toggleMenu {
+  cursor: pointer;
+}
+
+@media all and (min-width: 700px) and (max-width: 1100px) {
+  header .content {
+    width: 95%;
+  }
+}
+@media all and (max-width: 700px) {
+  header .content {
+    width: 100%;
+    height: 64px;
+    justify-content: space-between;
+  }
+
+  input.toggleMenu {
+    display: none;
+  }
+
+  #menu + label, #users-menu + label {
+    margin: 0 20px;
+  }
+
+  label.toggleMenu {
+    display: block;
+    color: #ffffff;
+    font-size: 1.3em;
+  }
+  label.toggleMenu i {
+    size: 32px;
+    color: #ffffff;
+  }
+
+  .main-links {
+    display: none;
+  }
+
+  .logo-centered {
+    display: inline-block;
+    width: 45px;
+  }
+
+  .main-toggle:checked ~ .mobile-menu {
+    display: block;
+  }
+}
 footer {
   width: 100%;
   height: 450px;
