@@ -19,36 +19,36 @@
   margin-left: 4px;
 }
 
-.discover {
+.discover-form {
   display: flex;
 }
-.discover label {
+.discover-form label {
   color: #000000;
   font-size: 1em;
   margin-bottom: 4px;
 }
-.discover select {
+.discover-form select {
   padding: 10px 30px 10px 10px;
   border-radius: 5px;
   background-color: #e4e4e4;
 }
-.discover select option {
+.discover-form select option {
   padding: 25px 0;
   background-color: #ffffff;
 }
-.discover select option::-webkit-scrollbar-thumb {
+.discover-form select option::-webkit-scrollbar-thumb {
   background: red;
 }
-.discover select::-webkit-scrollbar {
+.discover-form select::-webkit-scrollbar {
   width: 5px;
 }
-.discover select::-webkit-scrollbar-thumb {
+.discover-form select::-webkit-scrollbar-thumb {
   background: red;
 }
-.discover select::-webkit-scrollbar-button {
+.discover-form select::-webkit-scrollbar-button {
   display: none;
 }
-.discover div label {
+.discover-form div label {
   display: block;
 }
 
@@ -63,6 +63,9 @@
   display: flex;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-right: auto;
+}
+.result .item img {
+  width: 182px;
 }
 
 .info {
@@ -104,6 +107,15 @@
   margin-right: 10px;
 }
 
+@media all and (max-width: 1000px) {
+  .main_content {
+    width: 95%;
+  }
+
+  .result .item {
+    width: 100%;
+  }
+}
 .pagination-wrapper {
   display: flex;
   align-items: center;

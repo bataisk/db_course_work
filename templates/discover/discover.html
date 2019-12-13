@@ -28,7 +28,7 @@
             </h2>
             <div class="form-wrapper hide">
 
-                <form method="post" class="discover">
+                <form method="post" class="discover-form">
                 <div>
                     <label for="release_year">Year</label>
                     <select id="release_year">
@@ -59,7 +59,7 @@
             {% for result in results %}
                 <div class="item">
                     <div class="image_content">
-                        <a href="{{ result.get_absolute_url }}"><img src="{{ result|poster:'w185_and_h278_bestv2' }}" alt="Poster"></a>
+                        <a href="{{ result.get_absolute_url }}"><img src="{{ result|poster:'w300' }}" alt="Poster"></a>
                         <div class="meta">
 
                         </div>

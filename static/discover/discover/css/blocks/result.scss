@@ -9,13 +9,17 @@
     display: flex;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-right: auto;
+
+    img {
+      width: 182px;
+    }
+
   }
 }
 
 .info {
   display: flex;
   flex-direction: column;
-
 
   h3 {
     font-size: 1.1em;
@@ -56,6 +60,17 @@
       margin-right: 10px;
     }
 
+  }
+}
+
+@media all and (max-width: 1000px) {
+
+  .main_content {
+    width: 95%;
+  }
+
+  .result .item {
+    width: 100%;
   }
 
 }
