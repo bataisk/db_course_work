@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'the_movie_db.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'movies_db',
+        'NAME': 'movies',
         'USER': 'root',
-        'PASSWORD': 'dddd',
+        'PASSWORD': 'root',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         'OPTIONS': {
