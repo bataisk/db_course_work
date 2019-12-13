@@ -32,6 +32,19 @@ class Title(models.Model):
         db_table = 'titles'
 
 
+class Image(models.Model):
+    is_poster = models.BooleanField(default=True)
+    url = models.CharField(max_length=50)
+    height = models.IntegerField()
+    width = models.IntegerField()
+    vote_average = models.FloatField()
+    vote_count = models.IntegerField()
+    title = models.ForeignKey(Title, on_delete=models.CASCADE, related_name='images')
+
+    class Meta:
+        db_table = 'titles_images'
+
+
 class Genre(models.Model):
     is_movie_genre = models.BooleanField(default=True)
     is_both_genre = models.BooleanField(default=False)

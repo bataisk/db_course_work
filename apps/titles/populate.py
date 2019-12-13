@@ -6,7 +6,7 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_movie_db.settings')
 import django
 django.setup()
-from apps.titles.models import Genre
+from apps.titles.models import Genre, Title, Image
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -17,14 +17,47 @@ def get_data(target):
     return json.loads(requests.get(url=f'{start_url}{target}?{api_key}').text)
 
 
-if __name__ == '__main__':
-    for genre in get_data('/genre/tv/list')['genres']:
+def add_images_to_title(title_id, is_movie):
+    if is_movie:
+        data = get_data(f'/movie/{title_id}/images')
+    else:
+        data = get_data(f'/tv/{title_id}/images')
+
+    posters = data['posters']
+    backdrops = data['backdrops']
+
+    for poster in posters:
         try:
-            g = Genre.objects.get(name__exact=genre['name'])
+            Image.objects.get(url=poster['file_path'])
         except ObjectDoesNotExist:
-            g = Genre(name=genre['name'])
-            g.is_movie_genre = False
-            g.save()
+            img = Image()
+            img.height = poster['height']
+            img.width = poster['width']
+            img.url = poster['file_path']
+            img.is_poster = True
+            img.vote_average = poster['vote_average']
+            img.vote_count = poster['vote_count']
+            img.title = Title.objects.get(tmdb_id__exact=title_id)
+            img.save()
+
+    for backdrop in backdrops:
+        try:
+            Image.objects.get(url=backdrop['file_path'])
+        except ObjectDoesNotExist:
+            img = Image()
+            img.height = backdrop['height']
+            img.width = backdrop['width']
+            img.url = backdrop['file_path']
+            img.is_poster = False
+            img.vote_average = backdrop['vote_average']
+            img.vote_count = backdrop['vote_count']
+            img.title = Title.objects.get(tmdb_id__exact=title_id)
+            img.save()
+
+
+for show in Title.objects.filter(is_movie=False):
+    add_images_to_title(show.tmdb_id, False)
+
 
 
 # id_list = [i['id'] for i in get_data('/tv/on_the_air')['results']]
