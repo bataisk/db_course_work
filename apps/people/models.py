@@ -12,7 +12,7 @@ class Person(models.Model):
     imdb_id = models.CharField(max_length=20, blank=True)
     name = models.CharField(max_length=50)
     popularity = models.FloatField(null=True)
-    biography = models.TextField(blank=True)
+    biography = models.TextField(blank=True, default="")
     photo = models.URLField(null=True)
 
     works = models.ManyToManyField(Title, through='CreatorRole', related_name='crew')
