@@ -18,7 +18,7 @@
                 <h2>On TV</h2>
                 <div class="column">
                      <figure>
-                        <a href="{{ first_show.get_absolute_url }}"><img src="{{ first_show|backdrop:'w500' }}" alt=""></a>
+                        <a href="{{ first_show.get_absolute_url }}"><img class="w500" src="{{ first_show|backdrop:'original' }}" alt=""></a>
                         <figcaption>
                             <figure class="nested">
                                 <a href="{{ first_show.get_absolute_url }}"><img src="{{ first_show|poster:'w58_and_h87_face' }}" alt=""></a>
@@ -32,7 +32,7 @@
 
                     {% for show in other_shows %}
                         <figure>
-                            <a href="{{ show.get_absolute_url }}"><img src="{{ show|backdrop:'w250_and_h141_face' }}" alt=""></a>
+                            <a href="{{ show.get_absolute_url }}"><img class="w250" src="{{ show|backdrop:'original' }}" alt=""></a>
                             <figcaption>
                                 <h3>{{ show.name }}</h3>
                                 <p>New episode airs in 3 days</p>
@@ -47,7 +47,7 @@
                 <div class="column">
                     {% for movie in other_movies %}
                         <figure>
-                            <a href="{{ movie.get_absolute_url }}"><img src="{{ movie|backdrop:'w250_and_h141_face' }}" alt=""></a>
+                            <a href="{{ movie.get_absolute_url }}"><img class="w250" src="{{ movie|backdrop:'original' }}" alt=""></a>
                             <figcaption>
                                 <h3>{{ movie.name }}</h3>
                                 <p>Sylvester Stallone, Yvette Monreal</p>
@@ -55,7 +55,7 @@
                         </figure>
                     {% endfor %}
                     <figure>
-                        <a href="{{ last_movie.get_absolute_url }}"><img src="{{ last_movie|backdrop:'w500' }}" alt=""></a>
+                        <a href="{{ last_movie.get_absolute_url }}"><img class="w500" src="{{ last_movie|backdrop:'original' }}" alt=""></a>
                         <figcaption>
                             <figure class="nested">
                                 <a href="{{ last_movie.get_absolute_url }}"><img src="{{ last_movie|poster:'w58_and_h87_face' }}" alt="Joker poster"></a>

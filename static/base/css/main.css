@@ -172,6 +172,8 @@ footer nav {
   width: 1000px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 footer nav div {
@@ -211,6 +213,34 @@ footer nav a {
   text-transform: uppercase;
   position: relative;
   bottom: -120px;
+}
+
+@media all and (max-width: 1000px) {
+  footer {
+    height: auto;
+  }
+  footer nav {
+    width: 95%;
+    padding: 0 20px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer nav div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .join {
+    position: static;
+  }
+  .join a {
+    position: static;
+  }
+  .join img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
