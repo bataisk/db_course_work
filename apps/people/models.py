@@ -30,14 +30,16 @@ class ActorRole(models.Model):
 
     class Meta:
         db_table = 'actor_role'
+        unique_together = ('title', 'actor', 'character')
 
 
 class CreatorRole(models.Model):
     title = models.ForeignKey(Title, on_delete=models.CASCADE)
     creator = models.ForeignKey(Person, on_delete=models.CASCADE)
-    job = models.CharField(max_length=20)
+    job = models.CharField(max_length=50)
 
     class Meta:
         db_table = 'creator_role'
+        unique_together = ('title', 'creator', 'job')
 
 
