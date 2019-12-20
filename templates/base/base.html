@@ -7,35 +7,33 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'base/css/all.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../static/base/css/main.css">
-
 
     {% block additional_head_tags %}
 
     {% endblock %}
 </head>
 <body>
-
     <header>
         <nav class="content">
             <div>
-                <input type="checkbox" name="toggle" id="menu" class="toggleMenu main-toggle hide">
-                <label for="menu" class="toggleMenu hide"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" name="toggle" id="menu" class="toggle-menu main-toggle hide">
+                <label for="menu" class="toggle-menu hide"><img src="{% static 'base/icons/list-menu.png' %}" alt=""></label>
                 <div class="mobile-menu hide">
                     <ul class="primary">
                         <li>
-                            <input type="checkbox" name="toggle" id="discover-menu" class="toggleMenu sub-toggle">
-                            <label for="discover-menu" class="toggleMenu">Discover</label>
+                            <input type="checkbox" name="toggle" id="discover-menu" class="toggle-menu sub-toggle">
+                            <label for="discover-menu" class="toggle-menu">Discover</label>
                             <ul class="sub-menu discover hide">
                                 <li><a href="{% url 'discover_movie' %}">Movies</a></li>
                                 <li><a href="{% url 'discover_show' %}">TV Shows</a></li>
                             </ul>
                         </li>
                         <li>
-                            <input type="checkbox" name="toggle" id="movies-menu" class="toggleMenu sub-toggle">
-                            <label for="movies-menu" class="toggleMenu">Movies</label>
+                            <input type="checkbox" name="toggle" id="movies-menu" class="toggle-menu sub-toggle">
+                            <label for="movies-menu" class="toggle-menu">Movies</label>
                             <ul class="sub-menu hide">
                                 <li><a href="">Popular</a></li>
                                 <li><a href="">Top Rated</a></li>
@@ -44,8 +42,8 @@
                             </ul>
                         </li>
                         <li>
-                            <input type="checkbox" name="toggle" id="shows-menu" class="toggleMenu sub-toggle">
-                            <label for="shows-menu" class="toggleMenu">TV Shows</label>
+                            <input type="checkbox" name="toggle" id="shows-menu" class="toggle-menu sub-toggle">
+                            <label for="shows-menu" class="toggle-menu">TV Shows</label>
                             <ul class="sub-menu tv hide">
                                 <li><a href="">Popular</a></li>
                                 <li><a href="">Top Rated</a></li>
@@ -54,8 +52,8 @@
                             </ul>
                           </li>
                         <li>
-                            <input type="checkbox" name="toggle" id="people-menu" class="toggleMenu sub-toggle">
-                            <label for="people-menu" class="toggleMenu">People</label>
+                            <input type="checkbox" name="toggle" id="people-menu" class="toggle-menu sub-toggle">
+                            <label for="people-menu" class="toggle-menu">People</label>
                             <ul class="sub-menu person hide">
                                 <li><a href="">Popular People</a></li>
                             </ul>
@@ -106,8 +104,7 @@
             <a href="{% url 'index' %}"><img src="{% static 'base/logo.svg' %}" alt="" class="hide logo-centered"></a>
 
             <div>
-                <input type="checkbox" name="toggle" id="users-menu" class="toggleMenu hide">
-                <label for="users-menu" class="toggleMenu hide"><i class="fas fa-user"></i></label>
+                <a href=""><i class="material-icons person-icon">person</i></a>
             </div>
             <ul class="main-links">
                 <li>
@@ -119,7 +116,7 @@
             </ul>
         </nav>
         <form method="post" class="search">
-            <input type="text" name="search_value" value="Search for a movie, tv show, person...">
+            <input type="text" name="search_value" placeholder="Search for a movie, tv show, person...">
         </form>
     </header>
     <!-- end of header -->

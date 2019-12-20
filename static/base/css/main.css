@@ -109,7 +109,7 @@ header .content {
   text-decoration: none;
 }
 
-.toggleMenu {
+.toggle-menu {
   cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ header .content {
     justify-content: space-between;
   }
 
-  input.toggleMenu {
+  input.toggle-menu {
     display: none;
   }
 
@@ -133,14 +133,20 @@ header .content {
     margin: 0 20px;
   }
 
-  label.toggleMenu {
-    display: block;
+  label.toggle-menu {
+    display: block !important;
     color: #ffffff;
     font-size: 1.3em;
   }
-  label.toggleMenu i {
-    size: 32px;
+  label.toggle-menu img {
+    width: 24px;
     color: #ffffff;
+  }
+
+  .person-icon {
+    color: white;
+    margin: 20px;
+    font-size: 32px;
   }
 
   .main-links {
