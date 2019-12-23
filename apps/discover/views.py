@@ -14,8 +14,6 @@ def index(request):
         'last_movie': movies[2]
     }
 
-    # import apps.people.populate
-
     return render(request, 'discover/index.html', context=context)
 
 
@@ -91,7 +89,6 @@ def discover_shows(request):
     shows = paginator.get_page(page_number)
     pages = set_up_pages(page_number, paginator.num_pages)
 
-
     context = {
         'genres': Genre.objects.raw(sql_query),
         'years': list(range(1900, 2020)).reverse(),
@@ -99,5 +96,6 @@ def discover_shows(request):
         'pages': pages,
         'is_movies_page': False
     }
+
     return render(request, 'discover/discover.html', context=context)
 

@@ -49,7 +49,7 @@ class Genre(models.Model):
     is_movie_genre = models.BooleanField(default=True)
     is_both_genre = models.BooleanField(default=False)
     name = models.CharField(max_length=20, unique=True)
-    titles = models.ManyToManyField(Title, db_table='title_genre')
+    titles = models.ManyToManyField(Title, db_table='title_genre', related_name='genres')
 
     class Meta:
         db_table = 'genres'

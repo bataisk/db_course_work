@@ -1,11 +1,5 @@
 import requests
 import json
-
-
-import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'the_movie_db.settings')
-import django
-django.setup()
 from apps.titles.models import Genre, Title, Image
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -57,7 +51,6 @@ def add_images_to_title(title_id, is_movie):
 
 for show in Title.objects.filter(is_movie=False):
     add_images_to_title(show.tmdb_id, False)
-
 
 
 # id_list = [i['id'] for i in get_data('/tv/on_the_air')['results']]
