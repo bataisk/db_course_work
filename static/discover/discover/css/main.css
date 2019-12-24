@@ -21,6 +21,7 @@
 
 .discover-form {
   display: flex;
+  align-items: center;
 }
 .discover-form label {
   color: #000000;
@@ -29,27 +30,40 @@
 }
 .discover-form select {
   padding: 10px 30px 10px 10px;
+  margin-right: 30px;
   border-radius: 5px;
   background-color: #e4e4e4;
+  border: none;
+}
+.discover-form select:focus {
+  border: none;
 }
 .discover-form select option {
   padding: 25px 0;
-  background-color: #ffffff;
+  background-color: #e4e4e4;
 }
-.discover-form select option::-webkit-scrollbar-thumb {
-  background: red;
+.discover-form #release-year {
+  width: 100px;
 }
-.discover-form select::-webkit-scrollbar {
-  width: 5px;
+.discover-form #sort-by {
+  width: 220px;
 }
-.discover-form select::-webkit-scrollbar-thumb {
-  background: red;
+.discover-form #with-genres {
+  height: 100px;
+  width: 260px;
 }
-.discover-form select::-webkit-scrollbar-button {
-  display: none;
+.discover-form #with-genres option {
+  padding: 0;
 }
 .discover-form div label {
   display: block;
+}
+
+.submit-form {
+  background-color: #e4e4e4;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
 }
 
 .result {

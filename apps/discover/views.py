@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Q
 from apps.titles.models import Title, Genre
 from django.core.paginator import Paginator
 
@@ -19,6 +20,18 @@ def index(request):
 
 def rate_in_percents(rate):
     return str(rate * 10)[:2]
+
+
+def get_filtered_query(is_movie=True, release_year=None, sort_by=None, genres=None):
+    f = Q(is_movie=is_movie)
+
+    if release_year:
+        f &= Q(release_date__year=release_year)
+
+    if genres:
+        f &= Q(genres__in=genres)
+
+    return Title.objects.filter(f)
 
 
 def set_up_pages(page_number, pages_number):
@@ -56,8 +69,26 @@ def set_up_pages(page_number, pages_number):
 
 
 def discover_movies(request):
-    sql_query = 'SELECT * FROM genres WHERE is_movie_genre = TRUE OR is_both_genre = TRUE;'
-    paginator = Paginator(Title.objects.filter(is_movie=True), 10)
+    titles_filters = {
+        'is_movie': True,
+        'release_year': None,
+        'sort_by': None,
+        'genres': []
+    }
+
+    try:
+        titles_filters['release_year'] = int(request.GET.get('release-year'))
+    except TypeError:
+        pass
+
+    try:
+        titles_filters['genres'] = request.GET.getlist('genres')
+        titles_filters['genres'] = [int(i) for i in titles_filters['genres']]
+    except TypeError:
+        pass
+
+    titles = get_filtered_query(**titles_filters)
+    paginator = Paginator(titles, 10)
 
     try:
         page_number = int(request.GET.get('page'))
@@ -66,20 +97,22 @@ def discover_movies(request):
 
     movies = paginator.get_page(page_number)
     pages = set_up_pages(page_number, paginator.num_pages)
+    years = list(range(1900, 2021))
+    years.reverse()
 
     context = {
-        'genres': Genre.objects.raw(sql_query),
-        'years': list(range(1900, 2020)).reverse(),
+        'genres': Genre.objects.all(),
+        'years': years,
         'results': movies,
         'pages': pages,
-        'is_movies_page': True
+        'is_movies_page': True,
+        'selected_values': titles_filters
     }
     return render(request, 'discover/discover.html', context=context)
 
 
 def discover_shows(request):
     paginator = Paginator(Title.objects.filter(is_movie=False), 10)
-    sql_query = 'SELECT * FROM genres WHERE is_movie_genre = FALSE OR is_both_genre = TRUE;'
 
     try:
         page_number = int(request.GET.get('page'))
@@ -89,9 +122,12 @@ def discover_shows(request):
     shows = paginator.get_page(page_number)
     pages = set_up_pages(page_number, paginator.num_pages)
 
+    years = list(range(1900, 2021))
+    years.reverse()
+
     context = {
-        'genres': Genre.objects.raw(sql_query),
-        'years': list(range(1900, 2020)).reverse(),
+        'genres': Genre.objects.all(),
+        'years': years,
         'results': shows,
         'pages': pages,
         'is_movies_page': False

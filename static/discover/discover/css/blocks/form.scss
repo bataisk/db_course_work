@@ -25,6 +25,7 @@
 
 .discover-form {
   display: flex;
+  align-items: center;
 
   label {
     color: $black;
@@ -34,29 +35,36 @@
 
   select {
     padding: 10px 30px 10px 10px;
+    margin-right: 30px;
     border-radius: 5px;
     background-color: $grey;
+    border: none;
+
+    &:focus {
+      border: none;
+    }
 
     option {
       padding: 25px 0;
-      background-color: $white;
-      &::-webkit-scrollbar-thumb {
-      background: red;
+      background-color: $grey;
     }
-    }
+  }
 
-    &::-webkit-scrollbar {
-      width: 5px;
-    }
+  #release-year {
+    width: 100px;
+  }
 
-    &::-webkit-scrollbar-thumb {
-      background: red;
-    }
+  #sort-by {
+    width: 220px;
+  }
 
-    &::-webkit-scrollbar-button {
-      display: none;
-    }
+  #with-genres {
+    height: 100px;
+    width: 260px;
 
+    option {
+      padding: 0;
+    }
   }
 
   div {
@@ -64,6 +72,13 @@
       display: block;
     }
   }
+}
+
+.submit-form {
+  background-color: $grey;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
 }
 
 

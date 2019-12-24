@@ -29,6 +29,7 @@ class Title(models.Model):
         return f'/title/{self.pk}'
 
     class Meta:
+        ordering = ('-popularity',)
         db_table = 'titles'
 
 
@@ -46,8 +47,6 @@ class Image(models.Model):
 
 
 class Genre(models.Model):
-    is_movie_genre = models.BooleanField(default=True)
-    is_both_genre = models.BooleanField(default=False)
     name = models.CharField(max_length=20, unique=True)
     titles = models.ManyToManyField(Title, db_table='title_genre', related_name='genres')
 
