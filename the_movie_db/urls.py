@@ -19,6 +19,7 @@ from apps.discover.views import index
 
 urlpatterns = [
     path('', index, name='index'),
+    path('user/', include('apps.users.urls')),
     path('discover/', include('apps.discover.urls')),
     path('title/', include('apps.titles.urls')),
     path('admin/', admin.site.urls),

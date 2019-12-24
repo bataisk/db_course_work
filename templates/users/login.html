@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <main>
+        <h2>Login to your account</h2>
+        <p>
+            In order to use the editing and rating capabilities of TMDb, as well as get personal recommendations you will
+            need to login to your account. If you do not have an account, registering for an account is free and simple.
+            <a href="">Click here</a> to get started.
+        </p>
+        <p>If you signed up but didn't get your verification email, <a href="">click here</a> to have it resent.</p>
+        <form method="post">
+            <div class="fields">
+                <label for="username">Username</label>
+                <input id="username" type="text">
+                <label for="password">Password</label>
+                <input  id="password" type="password">
+            </div>
+            <div class="submit">
+                <input type="submit" value="Login">
+                <a href="">Reset password</a>
+            </div>
+        </form>
+    </main>
+{% endblock %}
