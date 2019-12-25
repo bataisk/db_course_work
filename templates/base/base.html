@@ -120,8 +120,10 @@
                 {% endif %}
             </ul>
         </nav>
-        <form method="post" class="search">
-            <input type="text" name="search_value" placeholder="Search for a movie, tv show, person...">
+        <form method="get" action="{% url 'search_page' %}" class="search">
+            <input type="text" name="query" placeholder="Search for a movie, tv show, person...">
+            {% csrf_token %}
+            <input class="hide" type="submit">
         </form>
     </header>
     <!-- end of header -->

@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from apps.discover.views import index
+from apps.search.views import search_page
 
 urlpatterns = [
     path('', index, name='index'),
     path('user/', include('apps.users.urls')),
     path('discover/', include('apps.discover.urls')),
     path('title/', include('apps.titles.urls')),
+    path('search/', search_page, name='search_page'),
     path('admin/', admin.site.urls),
 ]

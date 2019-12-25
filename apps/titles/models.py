@@ -49,11 +49,6 @@ class Image(models.Model):
 class Genre(models.Model):
     name = models.CharField(max_length=20, unique=True)
     titles = models.ManyToManyField(Title, db_table='title_genre', related_name='genres')
-    is_movie_genre = models.BooleanField(default=0)
-    is_both_genre = models.BooleanField(default=0)
-
-    def get_absolute_url(self):
-        return f'//'
 
     class Meta:
         db_table = 'genres'

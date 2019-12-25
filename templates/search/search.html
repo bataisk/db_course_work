@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+    Search page
+{% endblock %}
+
+{% block additional_head_tags %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'search/css/main.css' %}">
+{% endblock %}
+
+{% block main %}
+    {% load image_urls %}
+    <main>
+        <h2>Search result for query: {{ query }}</h2>
+        <section class="result">
+            {% for result in results %}
+                <div class="item">
+                    <div class="image_content">
+                        <a href="{{ result.get_absolute_url }}"><img src="{{ result|poster:'w300' }}" alt="Poster"></a>
+                        <div class="meta">
+
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="wrapper">
+                            <div class="user-rate">
+                                {{ result.vote_average|floatformat:2 }}
+                            </div>
+
+                            <div>
+                                <h3>{{ result.name }}</h3>
+                                <span>{{ result.release_date }}</span>
+                            </div>
+                        </div>
+                        <p class="description">{{ result.overview|truncatechars:255 }}</p>
+                        <p class="more_info">More Info<a href="{{ result.get_absolute_url }}"></a></p>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+    </main>
+{% endblock %}
