@@ -162,6 +162,21 @@ header .content {
     display: block;
   }
 }
+.user-profile-link {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  background-color: #0177d2;
+  font-size: 0.9em;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
 footer {
   width: 100%;
   height: 450px;
