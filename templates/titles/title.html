@@ -239,7 +239,7 @@
             <h4>Genres</h4>
             <ul>
                 {% for genre in genres %}
-                    <li><a href="">{{ genre.name }}</a></li>
+                    <li><a href="/discover/title/?genres={{ genre.pk }}">{{ genre.name }}</a></li>
                 {% endfor %}
             </ul>
         </section>

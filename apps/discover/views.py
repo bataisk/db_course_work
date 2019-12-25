@@ -22,8 +22,10 @@ def rate_in_percents(rate):
     return str(rate * 10)[:2]
 
 
-def get_filtered_query(is_movie=True, release_year=None, sort_by=None, genres=None):
-    f = Q(is_movie=is_movie)
+def get_filtered_query(is_movies_page=True, is_titles_page=False, release_year=None, sort_by=None, genres=None):
+    f = Q()
+    if not is_titles_page:
+        f = Q(is_movie=is_movies_page)
 
     if release_year:
         f &= Q(release_date__year=release_year)
@@ -31,7 +33,10 @@ def get_filtered_query(is_movie=True, release_year=None, sort_by=None, genres=No
     if genres:
         f &= Q(genres__in=genres)
 
-    return Title.objects.filter(f)
+    if sort_by:
+        return Title.objects.filter(f).order_by().order_by(sort_by)
+    else:
+        return Title.objects.filter(f)
 
 
 def set_up_pages(page_number, pages_number):
@@ -68,16 +73,32 @@ def set_up_pages(page_number, pages_number):
     return pages
 
 
-def discover_movies(request):
+def discover_page(request):
+    if request.path.split('/')[2] == 'movie':
+        is_movies_page = True
+        is_titles_page = False
+    elif request.path.split('/')[2] == 'title':
+        is_titles_page = True
+        is_movies_page = False
+    else:
+        is_movies_page = False
+        is_titles_page = False
+
     titles_filters = {
-        'is_movie': True,
+        'is_movies_page': is_movies_page,
+        'is_titles_page': is_titles_page,
         'release_year': None,
-        'sort_by': None,
+        'sort_by': '',
         'genres': []
     }
 
     try:
         titles_filters['release_year'] = int(request.GET.get('release-year'))
+    except TypeError:
+        pass
+
+    try:
+        titles_filters['sort_by'] = request.GET.get('sort-by')
     except TypeError:
         pass
 
@@ -105,33 +126,35 @@ def discover_movies(request):
         'years': years,
         'results': movies,
         'pages': pages,
-        'is_movies_page': True,
+        'full_path': request.get_full_path(),
+        'is_movies_page': is_movies_page,
+        'is_titles_page': is_titles_page,
         'selected_values': titles_filters
     }
     return render(request, 'discover/discover.html', context=context)
 
 
-def discover_shows(request):
-    paginator = Paginator(Title.objects.filter(is_movie=False), 10)
-
-    try:
-        page_number = int(request.GET.get('page'))
-    except TypeError:
-        page_number = 1
-
-    shows = paginator.get_page(page_number)
-    pages = set_up_pages(page_number, paginator.num_pages)
-
-    years = list(range(1900, 2021))
-    years.reverse()
-
-    context = {
-        'genres': Genre.objects.all(),
-        'years': years,
-        'results': shows,
-        'pages': pages,
-        'is_movies_page': False
-    }
-
-    return render(request, 'discover/discover.html', context=context)
+# def discover_shows(request):
+#     paginator = Paginator(Title.objects.filter(is_movie=False), 10)
+#
+#     try:
+#         page_number = int(request.GET.get('page'))
+#     except TypeError:
+#         page_number = 1
+#
+#     shows = paginator.get_page(page_number)
+#     pages = set_up_pages(page_number, paginator.num_pages)
+#
+#     years = list(range(1900, 2021))
+#     years.reverse()
+#
+#     context = {
+#         'genres': Genre.objects.all(),
+#         'years': years,
+#         'results': shows,
+#         'pages': pages,
+#         'is_movies_page': False
+#     }
+#
+#     return render(request, 'discover/discover.html', context=context)
 

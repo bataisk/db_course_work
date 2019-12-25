@@ -12,12 +12,12 @@
       text-decoration: none;
     }
 
-    .movies {
-      color: $green;
+    .movies, .shows {
+      color: $blue;
     }
 
-    .shows {
-      color: $blue;
+    .titles {
+      color: $green;
       margin-left: 4px;
     }
   }

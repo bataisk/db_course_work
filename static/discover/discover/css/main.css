@@ -11,11 +11,11 @@
 .main_content h2 a {
   text-decoration: none;
 }
-.main_content h2 .movies {
-  color: #00d573;
-}
-.main_content h2 .shows {
+.main_content h2 .movies, .main_content h2 .shows {
   color: #2dd4f7;
+}
+.main_content h2 .titles {
+  color: #00d573;
   margin-left: 4px;
 }
 

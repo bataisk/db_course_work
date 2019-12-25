@@ -17,10 +17,16 @@
         <section class="main_content">
             <h2>
                 Discover New Movies & TV Shows
-                {% if is_movies_page %}
-                    <a style="border-bottom: #00d573 1px solid" class="movies" href="{% url 'discover_movie' %}">Movies</a>
+                {% if is_titles_page %}
+                    <a class="titles" style="border-bottom: #00d573 1px solid" href="{% url 'discover_title' %}">All</a>
+                    <a class="movies" href="{% url 'discover_movie' %}">Movies</a>
+                    <a class="shows" href="{% url 'discover_show' %}">TV Shows</a>
+                {% elif is_movies_page %}
+                    <a class="titles" href="{% url 'discover_title' %}">All</a>
+                    <a style="border-bottom: #2dd4f7 1px solid" class="movies" href="{% url 'discover_movie' %}">Movies</a>
                     <a class="shows" href="{% url 'discover_show' %}">TV Shows</a>
                 {% else %}
+                    <a class="titles" href="{% url 'discover_title' %}">All</a>
                     <a class="movies" href="{% url 'discover_movie' %}">Movies</a>
                     <a style="border-bottom: #2dd4f7 1px solid"  class="shows" href="{% url 'discover_show' %}">TV Shows</a>
                 {% endif %}
@@ -49,8 +55,12 @@
                 <div>
                     <label for="sort-by">Sort By</label>
                     <select id="sort-by" name="sort-by">
-                        <option value="popularity_des">Popularity Descending</option>
-                        <option value="popularity_asc">Popularity Ascending</option>
+                        <option value="">Popularity Descending</option>
+                        <option value="popularity">Popularity Ascending</option>
+                        <option value="-vote_average">Rating Descending</option>
+                        <option value="vote_average">Rating Ascending</option>
+                        <option value="-release_date">Release Date Descending</option>
+                        <option value="release_date">Release Date Ascending</option>
                     </select>
                 </div>
                 <div>
@@ -100,27 +110,27 @@
             <div class="pagination-wrapper">
             <div class="pagination">
                 {% if pages.is_previous_exist %}
-                    <a href="?page={{ pages.previous_page }}">← Previous</a>
+                    <a href="{{ full_path|page_url:pages.previous_page }}">← Previous</a>
                 {% endif %}
                 {% if pages.is_fists_exist %}
-                    <a href="?page=1">1</a>
-                    <a href="?page=2">2</a>
+                    <a href="{{ full_path|page_url:1 }}">1</a>
+                    <a href="{{ full_path|page_url:2 }}">2</a>
                     <span>...</span>
                 {% endif %}
                 {% for page_number in pages.previous_pages %}
-                    <a href="?page={{ page_number }}">{{ page_number }}</a>
+                    <a href="{{ full_path|page_url:page_number }}">{{ page_number }}</a>
                 {% endfor %}
                 <span class="selected">{{ results.number }}</span>
                 {% for page_number in pages.next_pages %}
-                    <a href="?page={{ page_number }}">{{ page_number }}</a>
+                    <a href="{{ full_path|page_url:page_number }}">{{ page_number }}</a>
                 {% endfor %}
                 {% if pages.is_lasts_exist %}
                     <span>...</span>
-                    <a href="?page={{ pages.last.0 }}">{{ pages.last.0 }}</a>
-                    <a href="?page={{ pages.last.1 }}">{{ pages.last.1 }}</a>
+                    <a href="{{ full_path|page_url:pages.last.0 }}">{{ pages.last.0 }}</a>
+                    <a href="{{ full_path|page_url:pages.last.1 }}">{{ pages.last.1 }}</a>
                 {% endif %}
                 {% if pages.is_next_exist %}
-                    <a href="?page={{ pages.next }}">Next →</a>
+                    <a href="{{ full_path|page_url:pages.next }}">Next →</a>
                 {% endif %}
             </div>
             </div>
