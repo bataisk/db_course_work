@@ -32,7 +32,11 @@
                 <div>
                     <label for="release-year">Year</label>
                     <select id="release-year" name="release-year">
-                        <option disabled>None</option>
+                        {% if selected_values.release_year %}
+                            <option selected value="0">None</option>
+                        {% else %}
+                            <option value="0">None</option>
+                        {% endif %}
                         {% for year in years %}
                             {% if selected_values.release_year == year %}
                                 <option value="{{ year }}" selected>{{ year }}</option>
