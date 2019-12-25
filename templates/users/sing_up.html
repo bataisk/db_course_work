@@ -4,53 +4,56 @@
     Sign Up
 {% endblock %}
 
+{% block additional_head_tags %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/sing_up/css/main.css' %}">
+{% endblock %}
+
 {% block main %}
     <main>
         <section class="sing_up">
             <h2>Sign up for an account</h2>
             <p>
-                Signing up for an account is free and easy. Fill out the form below to get started. JavaScript is
-                required to to continue.
+                Signing up for an account is free and easy. Fill out the form below to get started.
             </p>
-            <form action="sing_up.html" method="post">
-                <div class="fields">
-                    <label for="username">Username</label>
-                    <input id="username" type="text">
-
-                    <label for="password">Password (4 characters minimum)</label>
-                    <input id="password" type="password">
-
-                    <label for="conf_password">Password Confirm</label>
-                    <input id="conf_password" type="password">
-
-                    <label for="email">Email</label>
-                    <input id="email" type="email">
+            {% if form.non_field_errors %}
+                <div class="errors-card">
+                    <h2>There was an error processing your signup</h2>
+                    <div class="errors">
+                        <ul>
+                            {% for error in form.non_field_errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
-                <p>
-                    By clicking the "Sign up" button below, I certify that I have read and agree
-                    to the TMDb terms of use and privacy policy.
-                </p>
+            {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <div>
+                        {{ form.username.errors }}
+                        <label for="{{ form.username.id_for_label }}">Username</label>
+                        {{ form.username }}
+                    </div>
+                    <div>
+                        <label for="{{ form.password.id_for_label }}">Password(4 characters minimum)</label>
+                        {{ form.password }}
+                    </div>
+                    <div>
+                        <label for="{{ form.confirm_password.id_for_label }}">Password Confirm</label>
+                        {{ form.confirm_password }}
+                    </div>
+                    <div>
+                        <label for="{{ form.email.id_for_label }}">Email</label>
+                        {{ form.email }}
+                    </div>
+                </fieldset>
                 <div class="submit">
                     <input type="submit" value="Sign Up">
-                    <a href="index.html">Cancel</a>
+                    <a href="{% url 'index' %}">Cancel</a>
                 </div>
             </form>
         </section>
-
-        <aside>
-            <div class="top">
-                <h2>Benefits of being a member</h2>
-            </div>
-            <div class="bottom">
-                <ul>
-                    <li>Log the movies and TV shows you have watched</li>
-                    <li>Keep track of your favourite movies and TV shows and get recommendations from them</li>
-                    <li>Build and maintain a personal watchlist</li>
-                    <li>Build custom mixed lists (movies and TV)</li>
-                    <li>Take part in movie and TV discussions</li>
-                    <li>Contribute to, and improve the information in our database</li>
-                </ul>
-            </div>
-        </aside>
     </main>
 {% endblock %}
