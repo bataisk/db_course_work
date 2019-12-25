@@ -27,13 +27,19 @@ def get_photo(obj, size):
 @register.filter(name='page_url')
 def get_url(full_path, page):
     get_parameters = ''.join(full_path.split('/')[3:])
-    get_parameters = get_parameters.split('&')
-    if page in get_parameters:
-        for parameter in get_parameters:
+    if not get_parameters:
+        return f'?page={page}'
+
+    if 'page' in get_parameters:
+        get_parameters = get_parameters.split('&')
+        for i, parameter in enumerate(get_parameters):
             if parameter.startswith('page='):
-                parameter = f'page={page}'
+                get_parameters[i] = f'page={page}'
                 break
+            elif parameter.startswith('?page='):
+                get_parameters[i] = f'?page={page}'
     else:
+        get_parameters = get_parameters.split('&')
         get_parameters.append(f'page={page}')
 
     return '&'.join(get_parameters)
