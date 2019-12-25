@@ -3,26 +3,46 @@
     Login
 {% endblock %}
 
+{% block additional_head_tags %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/login/css/main.css' %}">
+{% endblock %}
+
 {% block main %}
     <main>
         <h2>Login to your account</h2>
         <p>
             In order to use the editing and rating capabilities of TMDb, as well as get personal recommendations you will
             need to login to your account. If you do not have an account, registering for an account is free and simple.
-            <a href="">Click here</a> to get started.
+            <a href="{% url 'sing_up_page' %}">Click here</a> to get started.
         </p>
-        <p>If you signed up but didn't get your verification email, <a href="">click here</a> to have it resent.</p>
-        <form method="post">
-            <div class="fields">
-                <label for="username">Username</label>
-                <input id="username" type="text">
-                <label for="password">Password</label>
-                <input  id="password" type="password">
-            </div>
-            <div class="submit">
-                <input type="submit" value="Login">
-                <a href="">Reset password</a>
-            </div>
+
+        {% if form.non_field_errors %}
+                <div class="errors-card">
+                    <h2>There was an error processing your login</h2>
+                    <div class="errors">
+                        <ul>
+                            {% for error in form.non_field_errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endif %}
+
+        <form method="post" action="">
+            {% csrf_token %}
+            <fieldset>
+                <div>
+                    <label for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+                    {{ form.username }}
+                </div>
+                <div>
+                    <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+                    {{ form.password }}
+                </div>
+            </fieldset>
+            <input type="submit" value="Login">
         </form>
     </main>
 {% endblock %}
