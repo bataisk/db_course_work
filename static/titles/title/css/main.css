@@ -5,6 +5,7 @@
 
 .custom-bg {
   padding: 40px 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(50, 20, 20, 0.98) 0%, rgba(70, 35, 35, 0.88) 100%);
 }
 
 .single {

@@ -14,6 +14,25 @@ p {
   margin-bottom: 16px;
 }
 
+.errors-card {
+  margin-bottom: 30px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    padding: 20px;
+    background-color: $red;
+    color: $white;
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+
+  .errors {
+    padding: 20px;
+  }
+}
+
 form {
   fieldset {
     display: flex;

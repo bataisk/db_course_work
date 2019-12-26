@@ -77,30 +77,6 @@
         </div>
         </section>
 
-        <style>
-            .short-info::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                display: block;
-                filter: opacity(0) grayscale(100%) contrast(130%);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                will-change: opacity;
-                transition: filter 1s;
-                background-image: url("{{ title|backdrop:'w1400_and_h450_face' }}");
-            }
-
-            .custom-bg {
-                    background-image: radial-gradient(circle at 20% 50%, rgba(19.61%, 7.84%, 7.84%, 0.98) 0%, rgba(27.45%, 13.73%, 13.73%, 0.88) 100%);
-            }
-        </style>
-
         <div class="shortcut-bar">
             <ul>
                 <li><a href="">Comments</a></li>
@@ -131,44 +107,7 @@
         </ul>
         <p class="new-link"><a href="">Full Cast & Crew</a></p>
     </section>
-    <section class="panel social">
-        <div class="menu">
-            <h3>Social</h3>
-            <ul>
-                <li><a href="">Reviews <span>1</span></a></li>
-                <li><a href="">Discussions <span>28</span></a></li>
-            </ul>
-            <div class="review">
-                <div class="groped">
-                    <a href=""><img src="static/movies/some_user_avatar.png" alt=""></a>
-                    <div class="review_info">
-                        <div class="rating_wrapper">
-                            <h3><a href="">A review by msbreviews</a></h3>
-                            <span><i class="material-icons">star</i><span>9.0</span></span>
-                        </div>
-                        <h5>
-                            Written by <a href="">msbreviews</a> on
-                            <time datetime="2019-10-04">October  4, 2019</time>
-                        </h5>
 
-                    </div>
-                </div>
-                <div class="review_content">
-                    <p>If you enjoy reading my Spoiler-Free reviews, please follow my blog :)</p>
-                    <p>
-                        Obviously, Joker is one of my most anticipated movies of 2019. I mean, how couldn't it be?!
-                        Besides belonging to the superhero genre, DC has been on a streak of great films within its
-                        universe, so an isolated installment definitely excites me, especially about one of the
-                        evilest villains ever. It's by far one of the less comic-book-y flicks of the century. It
-                        doesn't follow the generic origin story formula, it avoids any cliches associated with the
-                        genre, and it's the type of movie that's becoming more and more rare nowad...
-                        <a href="">read the rest</a>
-                    </p>
-                </div>
-            </div>
-            <p class="new-link"><a href="">Read All Reviews</a></p>
-        </div>
-    </section>
     <section class="panel media">
         <div class="menu">
             <h3>Media</h3>
@@ -204,20 +143,6 @@
         <script src="{% static 'titles/title/js/select_media.js' %}"></script>
     </div>
     </div>
-{#        <section class="recommendations">#}
-{#            <h3>Recommendations</h3>#}
-{#            <figure>#}
-{#                <a href=""><img src="static/movies/once_in_hollywood_backdrop.jpg" alt=""></a>#}
-{#                <div class="meta">#}
-{#                    <time datetime="2019-07-25"><i class="material-icons">calendar_today</i>07/25/2019</time>#}
-{#                </div>#}
-{#                <figcaption>#}
-{#                    <a href="">Once Upon a Time... in Hollywood</a>#}
-{#                    <span>7.6 <i class="material-icons">star</i></span>#}
-{#                </figcaption>#}
-{#            </figure>#}
-{#        </section>#}
-
 
     <aside>
     <div class="aside-wrapper">
