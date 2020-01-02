@@ -1,27 +1,33 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import SingUpForm, LoginForm, User
+from django.contrib.auth.views import LoginView
 
 
-def login_page(request):
-    if request.method == 'POST':
-        login_form = LoginForm(request.POST)
-        if login_form.is_valid():
-            username = login_form.cleaned_data['username']
-            password = login_form.cleaned_data['password']
+class LoginPage(LoginView):
+    template_name = 'users/login.html'
+    authentication_form = LoginForm
 
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user=user)
-                return redirect('index')
 
-    else:
-        login_form = LoginForm()
-
-    context = {
-        'form': login_form
-    }
-    return render(request, 'users/login.html', context=context)
+# def login_page(request):
+#     if request.method == 'POST':
+#         login_form = LoginForm(request.POST)
+#         if login_form.is_valid():
+#             username = login_form.cleaned_data['username']
+#             password = login_form.cleaned_data['password']
+#
+#             user = authenticate(request, username=username, password=password)
+#             if user is not None:
+#                 login(request, user=user)
+#                 return redirect('index')
+#
+#     else:
+#         login_form = LoginForm()
+#
+#     context = {
+#         'form': login_form
+#     }
+#     return render(request, 'users/login.html', context=context)
 
 
 def logout_page(request):
