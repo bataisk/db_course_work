@@ -25,6 +25,8 @@ class Title(models.Model):
     number_of_seasons = models.IntegerField(default=1)
     last_air_date = models.DateField(null=True)
 
+    # user_rates = models.ManyToManyField(User, through=UserRate)
+
     def get_absolute_url(self):
         return f'/title/{self.pk}'
 

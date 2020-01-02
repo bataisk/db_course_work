@@ -35,6 +35,9 @@ h2 {
   line-height: 1.1;
   font-weight: 600;
 }
+.info h3 a {
+  text-decoration: none;
+}
 .info span {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -49,6 +52,9 @@ h2 {
   margin-top: auto;
   border-top: 1px solid #e3e3e3;
   padding: 16px;
+}
+.info .more_info a {
+  text-decoration: none;
 }
 .info .wrapper {
   padding: 10px 16px 0 16px;

@@ -134,6 +134,9 @@ def discover_page(request):
     return render(request, 'discover/discover.html', context=context)
 
 
+def handler404(request, *args, **argv):
+    return render(request, 'base/404.html')
+
 # def discover_shows(request):
 #     paginator = Paginator(Title.objects.filter(is_movie=False), 10)
 #

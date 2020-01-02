@@ -39,6 +39,9 @@ class SingUpForm(forms.Form):
         except User.DoesNotExist:
             pass
 
+        if len(password) < 4:
+            raise forms.ValidationError('Password too short')
+
         if password != confirm_password:
             raise forms.ValidationError('Password and confirm-password does not match')
 

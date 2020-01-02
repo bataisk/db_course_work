@@ -29,12 +29,12 @@
                             </div>
 
                             <div>
-                                <h3>{{ result.name }}</h3>
+                                <h3><a href="{{ result.get_absolute_url }}">{{ result.name }}</a></h3>
                                 <span>{{ result.release_date }}</span>
                             </div>
                         </div>
                         <p class="description">{{ result.overview|truncatechars:255 }}</p>
-                        <p class="more_info">More Info<a href="{{ result.get_absolute_url }}"></a></p>
+                        <p class="more_info"><a href="{{ result.get_absolute_url }}">More Info</a></p>
                     </div>
                 </div>
                 {% endfor %}

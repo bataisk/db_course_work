@@ -41,9 +41,26 @@
                         <i class="material-icons">bookmark</i>
                         <span class="tooltip-text">add to your watchlist</span>
                     </li>
-                    <li class="action-icon tooltip">
-                        <i class="material-icons">star</i>
-                        <span class="tooltip-text">Rate it!</span>
+                    <li id="user-rate-block" class="action-icon tooltip user-rate-block">
+                        {% if user_rate %}
+                            <i class="material-icons rated">star</i>
+                        {% else %}
+                            <i class="material-icons">star</i>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                            {% if user_rate %}
+                                <span id="rate-tooltip" class="tooltip-text">Rated {{ user_rate }}</span>
+                            {% else %}
+                                <span id="rate-tooltip" class="tooltip-text">Rate it!</span>
+                            {% endif %}
+                            <form id="user-rate-form" class="user-rate-form" action="" method="post">
+                                {% csrf_token %}
+                                <input name="user-rate" type="number" min="0" max="10">
+                                <input type="submit" class="hide">
+                            </form>
+                        {% else %}
+                            <span class="tooltip-text">Login to rate this</span>
+                        {% endif %}
                     </li>
                     <li class="play-trailer">
                         <i class="material-icons">play_arrow</i>
@@ -76,6 +93,8 @@
         </div>
         </div>
         </section>
+
+        <script src="{% static 'titles/title/js/rate_title.js' %}"></script>
 
         <div class="shortcut-bar">
             <ul>
@@ -122,7 +141,7 @@
         <div class="h-scroller">
             <div id="posters" class="posters">
                 {% for poster in posters %}
-                    <img src="{{ poster|image:'w220_and_h330_face' }}" alt="">
+                    <img class="title-image" src="{{ poster|image:'w220_and_h330_face' }}" alt="">
                 {% endfor %}
 
                 <div class="view-more">

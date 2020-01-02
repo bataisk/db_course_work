@@ -188,3 +188,15 @@
     }
   }
 }
+
+.user-rate-form {
+  position: absolute;
+  display: none;
+  top: 125%;
+  left: -30%;
+  z-index: 999;
+}
+
+.rated {
+  color: #faef3a;
+}

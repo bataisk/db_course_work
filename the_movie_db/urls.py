@@ -18,6 +18,8 @@ from django.urls import path, include
 from apps.discover.views import index
 from apps.search.views import search_page
 
+handler404 = 'apps.discover.views.handler404'
+
 urlpatterns = [
     path('', index, name='index'),
     path('user/', include('apps.users.urls')),

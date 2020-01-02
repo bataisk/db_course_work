@@ -69,14 +69,14 @@
                     <a href="{% url 'index' %}"><img src="{% static 'base/logo.svg' %}" alt="Logo" width="81" height="72"></a>
                 </li>
                 <li class="main-link">
-                    <a href="{% url 'discover_movie' %}">DISCOVER</a>
+                    <a href="{% url 'discover_title' %}">DISCOVER</a>
                     <ul class="hide sub-list">
                         <li><a href="{% url 'discover_movie' %}">Movies</a></li>
                         <li><a href="{% url 'discover_show' %}">TV Shows</a></li>
                     </ul>
                 </li>
                 <li class="main-link">
-                    <a href="">MOVIES</a>
+                    <a href="{% url 'discover_movie' %}">MOVIES</a>
                     <ul class="hide sub-list left-80">
                         <li><a href="">Popular</a></li>
                         <li><a href="">Top Rated</a></li>
@@ -85,7 +85,7 @@
                     </ul>
                 </li>
                 <li class="main-link">
-                    <a href="">TV SHOWS</a>
+                    <a href="{% url 'discover_show' %}">TV SHOWS</a>
                     <ul class="hide sub-list left-80">
                         <li><a href="">Popular</a></li>
                         <li><a href="">Top Rated</a></li>
@@ -136,7 +136,11 @@
         <nav>
             <div class="join">
                 <img src="{% static 'base/logo.svg' %}" alt="Logo" width="130" height="116">
-                <a href="">Join the Community</a>
+                {% if user.is_authenticated %}
+                    <a href="">Hi {{ user.username }}!</a>
+                {% else %}
+                    <a href="{% url 'login_page' %}">Join the Community</a>
+                {% endif %}
             </div>
             <div>
                 <h3>The Basics</h3>

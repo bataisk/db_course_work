@@ -25,7 +25,7 @@ SECRET_KEY = 'h++kn4f1ts67@!59n0!$0nob)%i6yx+p(eyu7(4fcj%m&#_oqh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition
@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.discover.apps.DiscoverConfig',
     'apps.titles.apps.TitlesConfig',
-    'apps.people.apps.PeopleConfig'
+    'apps.people.apps.PeopleConfig',
+    'apps.search.apps.SearchConfig',
+    'apps.users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
