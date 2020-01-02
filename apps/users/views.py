@@ -30,11 +30,6 @@ class LoginPage(LoginView):
 #     return render(request, 'users/login.html', context=context)
 
 
-def logout_page(request):
-    logout(request)
-    return redirect('index')
-
-
 def sing_up_page(request):
     if request.method == 'POST':
         sing_up_form = SingUpForm(request.POST)

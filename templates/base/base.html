@@ -112,7 +112,7 @@
                     <p class="hide">Can't find a movie or TV show? Login to create it.</p>
                 </li>
                 {% if user.is_authenticated %}
-                    <li class="main-link"><a href="{% url 'logout_page' %}">LOGOUT</a></li>
+                    <li class="main-link"><a href="{% url 'logout_page' %}?next={{ request.path }}">LOGOUT</a></li>
                     <li class="main-link user-profile-link"><a href="">{{ user.username.0 }}</a></li>
                 {% else %}
                     <li class="main-link"><a href="{% url 'login_page' %}?next={{ request.path }}">LOGIN</a></li>
