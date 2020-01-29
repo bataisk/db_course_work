@@ -62,13 +62,15 @@ form input[type=submit] {
   border-radius: 0.25em;
   font-weight: 700;
   padding: 6px 12px;
+  margin-right: 10px;
 }
 
-.submit a {
-  display: inline-block;
-  color: #01d277;
+.form-link {
   text-decoration: none;
-  margin-left: 10px;
+  color: #01d277;
+}
+.form-link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */

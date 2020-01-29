@@ -14,7 +14,7 @@
         <p>
             In order to use the editing and rating capabilities of TMDb, as well as get personal recommendations you will
             need to login to your account. If you do not have an account, registering for an account is free and simple.
-            <a href="{% url 'sing_up_page' %}">Click here</a> to get started.
+            <a class="form-link" href="{% url 'sing_up_page' %}">Click here</a> to get started.
         </p>
 
         {% if form.non_field_errors %}
@@ -28,7 +28,7 @@
                         </ul>
                     </div>
                 </div>
-            {% endif %}
+        {% endif %}
 
         <form method="post" action="">
             {% csrf_token %}
@@ -42,7 +42,10 @@
                     {{ form.password }}
                 </div>
             </fieldset>
-            <input type="submit" value="Login">
+            <div class="submit">
+                <input type="submit" value="Login">
+                <a class="form-link" href="{% url 'password_reset' %}">Reset Password</a>
+            </div>
         </form>
     </main>
 {% endblock %}
