@@ -1,14 +1,6 @@
 version: '3.7'
 
 
-#networks:
-#  scalenet:
-#    driver: bridge
-#    ipam:
-#      config:
-#        - subnet: 10.50.0.0/16
-
-
 services:
   db:
     image: postgres
@@ -16,6 +8,7 @@ services:
     hostname: db
     volumes:
       - /var/lib/postgresql/data
+    command: ["postgres", "-c", "log_statement=all"]
   web:
     build: .
     restart: always

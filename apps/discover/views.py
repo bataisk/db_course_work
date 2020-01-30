@@ -2,11 +2,20 @@ from django.shortcuts import render
 from django.db.models import Q
 from apps.titles.models import Title, Genre
 from django.core.paginator import Paginator
+from django.core.cache import cache
 
 
 def index(request):
-    shows = Title.objects.filter(is_movie=False)[:3]
-    movies = Title.objects.filter(is_movie=True)[:3]
+    shows = cache.get_or_set(
+        'on_air_shows',
+        Title.objects.filter(is_movie=False).only('backdrop_url', 'poster_url', 'name')[:3],
+        7200
+    )
+    movies = cache.get_or_set(
+        'on_air_movies',
+        Title.objects.filter(is_movie=True).only('backdrop_url', 'poster_url', 'name')[:3],
+        7200
+    )
 
     context = {
         'first_show': shows[0],
@@ -122,7 +131,7 @@ def discover_page(request):
     years.reverse()
 
     context = {
-        'genres': Genre.objects.all(),
+        'genres': cache.get_or_set("Genres", Genre.objects.all(), 72000),
         'years': years,
         'results': movies,
         'pages': pages,
