@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Title(models.Model):
@@ -26,6 +27,8 @@ class Title(models.Model):
     last_air_date = models.DateField(null=True)
 
     # user_rates = models.ManyToManyField(User, through=UserRate)
+
+    users_with_favorite = models.ManyToManyField(User, related_name='favorites')
 
     def get_absolute_url(self):
         return f'/title/{self.pk}'

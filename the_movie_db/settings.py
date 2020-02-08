@@ -25,6 +25,11 @@ SECRET_KEY = 'h++kn4f1ts67@!59n0!$0nob)%i6yx+p(eyu7(4fcj%m&#_oqh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+try:
+    RUN_IN_DOCKER = os.environ['RUN_IN_DOCKER']
+except KeyError:
+    RUN_IN_DOCKER = False
+
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -40,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'rest_framework',
     'apps.discover.apps.DiscoverConfig',
     'apps.titles.apps.TitlesConfig',
     'apps.people.apps.PeopleConfig',
@@ -82,15 +88,27 @@ WSGI_APPLICATION = 'the_movie_db.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
+if RUN_IN_DOCKER:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'postgres',
+            'USER': 'postgres',
+            'HOST': 'db',
+            'PORT': 5432,
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'movies',
+            'USER': 'root',
+            'PASSWORD': 'root',
+            'HOST': 'localhost',
+            'PORT': 3306,
+        }
+    }
 
 
 CACHES = {
@@ -99,6 +117,71 @@ CACHES = {
     }
 }
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'formatters': {
+        'simple': {
+            'format': '[%(asctime)s] %(levelname)s: %(message)s',
+            'datefmt': '%d/%m/%Y %H:%M:%S'
+        },
+        'sql_request': {
+            'format': '[[%(asctime)s] %(levelname)s: %(message)s\n(%(duration)s) %(sql)s, args=%(args)s\n',
+            'datefmt': '%d/%m/%Y %H:%M:%S'
+        }
+    },
+    'handlers': {
+        'console_dev': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'filters': ['require_debug_true']
+        },
+        'console_prod': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'level': 'ERROR',
+            'filters': ['require_debug_false']
+        },
+        'file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/django-site.log'),
+            'maxBytes': 1048576,
+            'backupCount': 10,
+            'formatter': 'simple'
+        },
+        'file_db': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/db/requests.log'),
+            'maxBytes': 1048576,
+            'backupCount': 10,
+            'formatter': 'simple'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console_dev', 'console_prod']
+        },
+        'django.server': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'django.db.backends': {
+            'level': 'DEBUG',
+            'handlers': ['file_db'],
+            'propagate': False
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
